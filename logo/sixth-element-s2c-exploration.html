@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — S2-C Explorations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #141210;
+      padding: 5rem 3rem;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .page-title {
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.48rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #3a3830;
+      margin-bottom: 1rem;
+    }
+
+    .page-sub {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: #4a4840;
+      margin-bottom: 5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .section-label {
+      max-width: 1300px;
+      margin: 0 auto 1.5rem;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.4rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #2e2c26;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #1e1c18;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 1300px;
+      margin: 0 auto 3px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      max-width: 1300px;
+      margin: 0 auto 3px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      max-width: 1300px;
+      margin: 0 auto 3px;
+    }
+
+    .gap { height: 5rem; }
+
+    .card {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .card.tall { aspect-ratio: 4/5; }
+
+    .card.dark   { background: #0d0c0a; }
+    .card.light  { background: #f0ece3; }
+    .card.cream  { background: #f7f3ea; }
+    .card.ink    { background: #080807; }
+    .card.warm   { background: #faf6ed; }
+    .card.mid    { background: #161410; }
+    .card.stone  { background: #e8e4dc; }
+    .card.char   { background: #111008; }
+    .card.parch  { background: #ede8de; }
+    .card.noir   { background: #0a0908; }
+
+    .tag {
+      position: absolute;
+      top: 1rem; left: 1.2rem;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.37rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+    .dark .tag, .ink .tag, .mid .tag, .char .tag, .noir .tag { color: #222018; }
+    .light .tag, .cream .tag, .warm .tag, .stone .tag, .parch .tag { color: #b8b4ac; }
+  </style>
+</head>
+<body>
+
+  <p class="page-title">Sixth Element Coffee Roasters · S2-C Direction</p>
+  <p class="page-sub">06 · DM Mono · Cormorant Garamond · Full exploration</p>
+
+
+  <!-- ── ROW 1: Size & weight of 06 ── -->
+  <p class="section-label">01 · Numeral weight & size variations</p>
+  <div class="grid-4">
+
+    <!-- Ultra light 06 -->
+    <div class="card dark">
+      <span class="tag">Weight 300</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="118" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="300" font-size="72"
+          fill="#f0ece3" opacity="0.88" letter-spacing="-2">06</text>
+        <line x1="42" y1="132" x2="218" y2="132" stroke="#f0ece3" stroke-width="0.5" opacity="0.2"/>
+        <text x="130" y="156" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.85">SIXTH</text>
+        <text x="130" y="178" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.85">ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- Regular 06 — the base -->
+    <div class="card light">
+      <span class="tag">Weight 400 · Base</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="118" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="72"
+          fill="#111" opacity="0.9" letter-spacing="-2">06</text>
+        <line x1="42" y1="132" x2="218" y2="132" stroke="#111" stroke-width="0.6" opacity="0.2"/>
+        <text x="130" y="156" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.9">SIXTH</text>
+        <text x="130" y="178" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.9">ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- Medium, tighter spacing -->
+    <div class="card dark">
+      <span class="tag">Weight 500 · Tight</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="118" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="500" font-size="72"
+          fill="#f0ece3" opacity="0.9" letter-spacing="4">06</text>
+        <line x1="42" y1="132" x2="218" y2="132" stroke="#f0ece3" stroke-width="0.6" opacity="0.2"/>
+        <text x="130" y="156" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.9">SIXTH</text>
+        <text x="130" y="178" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.9">ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- Large 06, wordmark smaller -->
+    <div class="card cream">
+      <span class="tag">Large numeral</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="130" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="96"
+          fill="#111" opacity="0.88" letter-spacing="-2">06</text>
+        <line x1="42" y1="148" x2="218" y2="148" stroke="#111" stroke-width="0.5" opacity="0.18"/>
+        <text x="130" y="168" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="15"
+          fill="#111" letter-spacing="8" opacity="0.6">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+  </div>
+
+
+  <!-- ── ROW 2: Rule variations & layout ── -->
+  <p class="section-label" style="margin-top:5rem">02 · Rule & layout variations</p>
+  <div class="grid-4">
+
+    <!-- Double rule -->
+    <div class="card ink">
+      <span class="tag">Double rule</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <line x1="42" y1="76" x2="218" y2="76" stroke="#f0ece3" stroke-width="0.8" opacity="0.5"/>
+        <line x1="42" y1="80" x2="218" y2="80" stroke="#f0ece3" stroke-width="0.3" opacity="0.2"/>
+        <text x="130" y="126" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="66"
+          fill="#f0ece3" opacity="0.9" letter-spacing="-2">06</text>
+        <line x1="42" y1="138" x2="218" y2="138" stroke="#f0ece3" stroke-width="0.3" opacity="0.2"/>
+        <line x1="42" y1="142" x2="218" y2="142" stroke="#f0ece3" stroke-width="0.8" opacity="0.5"/>
+        <text x="130" y="168" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.85">SIXTH</text>
+        <text x="130" y="190" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="9" opacity="0.85">ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- No rule, pure space -->
+    <div class="card warm">
+      <span class="tag">No rule · Space only</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="112" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="66"
+          fill="#111" opacity="0.88" letter-spacing="-2">06</text>
+        <text x="130" y="148" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.88">SIXTH</text>
+        <text x="130" y="170" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.88">ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- Bracketed 06 -->
+    <div class="card dark">
+      <span class="tag">Bracketed</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <!-- Brackets -->
+        <path d="M 52,70 L 42,70 L 42,148 L 52,148" fill="none" stroke="#f0ece3" stroke-width="1" opacity="0.4"/>
+        <path d="M 208,70 L 218,70 L 218,148 L 208,148" fill="none" stroke="#f0ece3" stroke-width="1" opacity="0.4"/>
+        <text x="130" y="127" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="72"
+          fill="#f0ece3" opacity="0.9" letter-spacing="-2">06</text>
+        <line x1="42" y1="158" x2="218" y2="158" stroke="#f0ece3" stroke-width="0.5" opacity="0.18"/>
+        <text x="130" y="180" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="18"
+          fill="#f0ece3" letter-spacing="8" opacity="0.85">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- 06 italicised mono -->
+    <div class="card stone">
+      <span class="tag">Italic mono</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="120" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="76"
+          font-style="italic"
+          fill="#111" opacity="0.85" letter-spacing="-2">06</text>
+        <line x1="42" y1="134" x2="218" y2="134" stroke="#111" stroke-width="0.5" opacity="0.2"/>
+        <text x="130" y="158" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.85">SIXTH</text>
+        <text x="130" y="180" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#111" letter-spacing="9" opacity="0.85">ELEMENT</text>
+      </svg>
+    </div>
+
+  </div>
+
+
+  <!-- ── ROW 3: Full lockup variations ── -->
+  <p class="section-label" style="margin-top:5rem">03 · Full lockup · Application-ready</p>
+  <div class="grid-3">
+
+    <!-- Portrait lockup dark — HERO -->
+    <div class="card tall dark">
+      <span class="tag">Portrait · Dark · Hero</span>
+      <svg width="300" height="380" viewBox="0 0 300 380">
+        <!-- Top rule -->
+        <line x1="40" y1="72" x2="260" y2="72" stroke="#f0ece3" stroke-width="0.7" opacity="0.4"/>
+        <!-- 06 large -->
+        <text x="150" y="172" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="88"
+          fill="#f0ece3" opacity="0.92" letter-spacing="2">06</text>
+        <!-- Rule -->
+        <line x1="40" y1="190" x2="260" y2="190" stroke="#f0ece3" stroke-width="0.7" opacity="0.4"/>
+        <!-- SIXTH -->
+        <text x="150" y="224" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="26"
+          fill="#f0ece3" letter-spacing="11" opacity="0.92">SIXTH</text>
+        <!-- ELEMENT -->
+        <text x="150" y="254" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="26"
+          fill="#f0ece3" letter-spacing="11" opacity="0.92">ELEMENT</text>
+        <!-- Bottom rule -->
+        <line x1="40" y1="270" x2="260" y2="270" stroke="#f0ece3" stroke-width="0.7" opacity="0.4"/>
+        <!-- Tagline -->
+        <text x="150" y="295" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="6.5"
+          fill="#f0ece3" letter-spacing="4" opacity="0.22">COFFEE ROASTERS · NEW YORK</text>
+      </svg>
+    </div>
+
+    <!-- Portrait lockup light — HERO -->
+    <div class="card tall cream">
+      <span class="tag">Portrait · Light · Hero</span>
+      <svg width="300" height="380" viewBox="0 0 300 380">
+        <line x1="40" y1="72" x2="260" y2="72" stroke="#111" stroke-width="0.7" opacity="0.35"/>
+        <text x="150" y="172" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="88"
+          fill="#111" opacity="0.9" letter-spacing="2">06</text>
+        <line x1="40" y1="190" x2="260" y2="190" stroke="#111" stroke-width="0.7" opacity="0.35"/>
+        <text x="150" y="224" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="26"
+          fill="#111" letter-spacing="11" opacity="0.9">SIXTH</text>
+        <text x="150" y="254" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="26"
+          fill="#111" letter-spacing="11" opacity="0.9">ELEMENT</text>
+        <line x1="40" y1="270" x2="260" y2="270" stroke="#111" stroke-width="0.7" opacity="0.35"/>
+        <text x="150" y="295" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="6.5"
+          fill="#111" letter-spacing="4" opacity="0.25">COFFEE ROASTERS · NEW YORK</text>
+      </svg>
+    </div>
+
+    <!-- Horizontal lockup -->
+    <div class="card tall mid">
+      <span class="tag">Horizontal · Dark</span>
+      <svg width="300" height="380" viewBox="0 0 300 380">
+        <!-- 06 left, wordmark right -->
+        <line x1="30" y1="152" x2="270" y2="152" stroke="#f0ece3" stroke-width="0.6" opacity="0.2"/>
+        <line x1="30" y1="240" x2="270" y2="240" stroke="#f0ece3" stroke-width="0.6" opacity="0.2"/>
+        <!-- 06 -->
+        <text x="80" y="218" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="68"
+          fill="#f0ece3" opacity="0.9">06</text>
+        <!-- Vertical divider -->
+        <line x1="138" y1="158" x2="138" y2="234" stroke="#f0ece3" stroke-width="0.6" opacity="0.2"/>
+        <!-- SIXTH ELEMENT stacked right -->
+        <text x="208" y="193" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="7" opacity="0.9">SIXTH</text>
+        <text x="208" y="219" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="20"
+          fill="#f0ece3" letter-spacing="7" opacity="0.9">ELEMENT</text>
+      </svg>
+    </div>
+
+  </div>
+
+
+  <!-- ── ROW 4: Mark-only (for profile / stamp) ── -->
+  <p class="section-label" style="margin-top:5rem">04 · Mark only · Profile · Stamp · Stamp</p>
+  <div class="grid-4">
+
+    <!-- Square dark -->
+    <div class="card char">
+      <span class="tag">Square · Dark</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="148" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="96"
+          fill="#f0ece3" opacity="0.92" letter-spacing="-2">06</text>
+      </svg>
+    </div>
+
+    <!-- Square light -->
+    <div class="card parch">
+      <span class="tag">Square · Light</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="148" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="96"
+          fill="#111" opacity="0.88" letter-spacing="-2">06</text>
+      </svg>
+    </div>
+
+    <!-- Stamped with border -->
+    <div class="card noir">
+      <span class="tag">Stamp · Border</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <rect x="28" y="28" width="204" height="204" fill="none" stroke="#f0ece3" stroke-width="1" opacity="0.35"/>
+        <rect x="34" y="34" width="192" height="192" fill="none" stroke="#f0ece3" stroke-width="0.35" opacity="0.15"/>
+        <text x="130" y="150" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="88"
+          fill="#f0ece3" opacity="0.9" letter-spacing="-2">06</text>
+      </svg>
+    </div>
+
+    <!-- 06 with C below hairline -->
+    <div class="card stone">
+      <span class="tag">06 / C ratio</span>
+      <svg width="260" height="260" viewBox="0 0 260 260">
+        <text x="130" y="118" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="64"
+          fill="#111" opacity="0.9" letter-spacing="-2">06</text>
+        <line x1="68" y1="130" x2="192" y2="130" stroke="#111" stroke-width="0.7" opacity="0.3"/>
+        <text x="130" y="180" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="64"
+          fill="#111" opacity="0.75">C</text>
+      </svg>
+    </div>
+
+  </div>
+
+</body>
+</html>

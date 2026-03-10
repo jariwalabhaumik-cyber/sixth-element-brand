@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Six Rules Exploration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0e0b;
+      padding: 5rem 3rem 8rem;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .page-title {
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.48rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #2e2c24;
+      margin-bottom: 0.8rem;
+    }
+    .page-sub {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: #3a3830;
+      margin-bottom: 5rem;
+    }
+    .section {
+      max-width: 1300px;
+      margin: 0 auto 6rem;
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1.5rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid #181610;
+      margin-bottom: 3px;
+    }
+    .sn { font-family: 'DM Mono', monospace; font-weight: 300; font-size: 0.4rem; letter-spacing: 0.4em; color: #28261e; }
+    .st { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 1.05rem; color: #504e44; letter-spacing: 0.03em; }
+    .sd { font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 0.38rem; letter-spacing: 0.4em; color: #201e16; text-transform: uppercase; margin-left: auto; }
+
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+
+    .card {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .tag {
+      position: absolute; top: 1rem; left: 1.2rem;
+      font-family: 'DM Mono', monospace; font-weight: 300;
+      font-size: 0.36rem; letter-spacing: 0.35em; text-transform: uppercase;
+    }
+    .dk  { background: #0c0b09; } .dk  .tag { color: #1c1a12; }
+    .lt  { background: #f2ede4; } .lt  .tag { color: #b8b4ac; }
+    .cr  { background: #f8f4eb; } .cr  .tag { color: #c4c0b8; }
+    .ch  { background: #090807; } .ch  .tag { color: #181612; }
+    .wm  { background: #faf6ee; } .wm  .tag { color: #ccc8be; }
+    .sg  { background: #161410; } .sg  .tag { color: #242018; }
+    .st2 { background: #e8e3da; } .st2 .tag { color: #b4b0a8; }
+    .nr  { background: #070605; } .nr  .tag { color: #141210; }
+    .md  { background: #131108; } .md  .tag { color: #201e14; }
+    .oc  { background: #1a160a; } .oc  .tag { color: #28240e; }
+  </style>
+</head>
+<body>
+
+  <p class="page-title">Sixth Element Coffee Roasters · Six Rules · Full Exploration</p>
+  <p class="page-sub">Six lines. Six elements. Every variation explored.</p>
+
+
+  <!-- ════════════════════════════════════════
+       01 — WEIGHT & OPACITY
+       The original idea, pushed further
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">01</span>
+      <span class="st">Weight & Opacity</span>
+      <span class="sd">Fade · diminish · the original idea pushed further</span>
+    </div>
+    <div class="grid-4">
+
+      <!-- Equal weight, fading opacity only -->
+      <div class="card dk">
+        <span class="tag">Opacity fade · equal weight</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="1.5" opacity="1"/>
+          <line x1="52" y1="88"  x2="208" y2="88"  stroke="#f2ede4" stroke-width="1.5" opacity="0.75"/>
+          <line x1="52" y1="104" x2="208" y2="104" stroke="#f2ede4" stroke-width="1.5" opacity="0.52"/>
+          <line x1="52" y1="120" x2="208" y2="120" stroke="#f2ede4" stroke-width="1.5" opacity="0.32"/>
+          <line x1="52" y1="136" x2="208" y2="136" stroke="#f2ede4" stroke-width="1.5" opacity="0.16"/>
+          <line x1="52" y1="152" x2="208" y2="152" stroke="#f2ede4" stroke-width="1.5" opacity="0.07"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Weight fade + opacity fade — double fade -->
+      <div class="card lt">
+        <span class="tag">Weight + opacity · double fade</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#111" stroke-width="3"   opacity="0.9"/>
+          <line x1="52" y1="90"  x2="208" y2="90"  stroke="#111" stroke-width="2.2" opacity="0.65"/>
+          <line x1="52" y1="106" x2="208" y2="106" stroke="#111" stroke-width="1.5" opacity="0.44"/>
+          <line x1="52" y1="120" x2="208" y2="120" stroke="#111" stroke-width="0.9" opacity="0.28"/>
+          <line x1="52" y1="132" x2="208" y2="132" stroke="#111" stroke-width="0.5" opacity="0.15"/>
+          <line x1="52" y1="142" x2="208" y2="142" stroke="#111" stroke-width="0.25" opacity="0.07"/>
+          <text x="130" y="188" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="208" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Reverse fade — lightest at top -->
+      <div class="card ch">
+        <span class="tag">Reverse · ascending weight</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="0.25" opacity="0.08"/>
+          <line x1="52" y1="88"  x2="208" y2="88"  stroke="#f2ede4" stroke-width="0.5"  opacity="0.16"/>
+          <line x1="52" y1="104" x2="208" y2="104" stroke="#f2ede4" stroke-width="1"    opacity="0.32"/>
+          <line x1="52" y1="120" x2="208" y2="120" stroke="#f2ede4" stroke-width="1.5"  opacity="0.52"/>
+          <line x1="52" y1="136" x2="208" y2="136" stroke="#f2ede4" stroke-width="2.2"  opacity="0.72"/>
+          <line x1="52" y1="152" x2="208" y2="152" stroke="#f2ede4" stroke-width="3"    opacity="0.92"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Center peak — heaviest in middle -->
+      <div class="card cr">
+        <span class="tag">Centre peak · bell curve weight</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#111" stroke-width="0.5"  opacity="0.2"/>
+          <line x1="52" y1="88"  x2="208" y2="88"  stroke="#111" stroke-width="1.2"  opacity="0.45"/>
+          <line x1="52" y1="104" x2="208" y2="104" stroke="#111" stroke-width="2.8"  opacity="0.88"/>
+          <line x1="52" y1="120" x2="208" y2="120" stroke="#111" stroke-width="2.8"  opacity="0.88"/>
+          <line x1="52" y1="136" x2="208" y2="136" stroke="#111" stroke-width="1.2"  opacity="0.45"/>
+          <line x1="52" y1="152" x2="208" y2="152" stroke="#111" stroke-width="0.5"  opacity="0.2"/>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="212" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       02 — LENGTH VARIATIONS
+       Lines of different lengths — asymmetry, rhythm
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">02</span>
+      <span class="st">Length Variations</span>
+      <span class="sd">Asymmetry · rhythm · lines of different reach</span>
+    </div>
+    <div class="grid-4">
+
+      <!-- Left-aligned, decreasing length -->
+      <div class="card sg">
+        <span class="tag">Left anchor · shrinking</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="1.4" opacity="0.9"/>
+          <line x1="52" y1="88"  x2="186" y2="88"  stroke="#f2ede4" stroke-width="1.4" opacity="0.75"/>
+          <line x1="52" y1="104" x2="164" y2="104" stroke="#f2ede4" stroke-width="1.4" opacity="0.58"/>
+          <line x1="52" y1="120" x2="142" y2="120" stroke="#f2ede4" stroke-width="1.4" opacity="0.4"/>
+          <line x1="52" y1="136" x2="120" y2="136" stroke="#f2ede4" stroke-width="1.4" opacity="0.24"/>
+          <line x1="52" y1="152" x2="98"  y2="152" stroke="#f2ede4" stroke-width="1.4" opacity="0.12"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Centered, decreasing both sides -->
+      <div class="card lt">
+        <span class="tag">Centre anchor · symmetric shrink</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52"  y1="72"  x2="208" y2="72"  stroke="#111" stroke-width="1.4" opacity="0.88"/>
+          <line x1="63"  y1="88"  x2="197" y2="88"  stroke="#111" stroke-width="1.4" opacity="0.7"/>
+          <line x1="76"  y1="104" x2="184" y2="104" stroke="#111" stroke-width="1.4" opacity="0.52"/>
+          <line x1="91"  y1="120" x2="169" y2="120" stroke="#111" stroke-width="1.4" opacity="0.35"/>
+          <line x1="106" y1="136" x2="154" y2="136" stroke="#111" stroke-width="1.4" opacity="0.2"/>
+          <line x1="120" y1="152" x2="140" y2="152" stroke="#111" stroke-width="1.4" opacity="0.1"/>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="212" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Staggered left/right alternating -->
+      <div class="card dk">
+        <span class="tag">Alternating anchor</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52"  y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="1.4" opacity="0.88"/>
+          <line x1="80"  y1="88"  x2="208" y2="88"  stroke="#f2ede4" stroke-width="1.4" opacity="0.72"/>
+          <line x1="52"  y1="104" x2="180" y2="104" stroke="#f2ede4" stroke-width="1.4" opacity="0.55"/>
+          <line x1="80"  y1="120" x2="208" y2="120" stroke="#f2ede4" stroke-width="1.4" opacity="0.38"/>
+          <line x1="52"  y1="136" x2="152" y2="136" stroke="#f2ede4" stroke-width="1.4" opacity="0.22"/>
+          <line x1="80"  y1="152" x2="208" y2="152" stroke="#f2ede4" stroke-width="1.4" opacity="0.1"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Right-aligned, decreasing -->
+      <div class="card cr">
+        <span class="tag">Right anchor · shrinking</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52"  y1="72"  x2="208" y2="72"  stroke="#111" stroke-width="1.4" opacity="0.9"/>
+          <line x1="74"  y1="88"  x2="208" y2="88"  stroke="#111" stroke-width="1.4" opacity="0.74"/>
+          <line x1="96"  y1="104" x2="208" y2="104" stroke="#111" stroke-width="1.4" opacity="0.56"/>
+          <line x1="118" y1="120" x2="208" y2="120" stroke="#111" stroke-width="1.4" opacity="0.38"/>
+          <line x1="140" y1="136" x2="208" y2="136" stroke="#111" stroke-width="1.4" opacity="0.22"/>
+          <line x1="162" y1="152" x2="208" y2="152" stroke="#111" stroke-width="1.4" opacity="0.1"/>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="212" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       03 — SPACING VARIATIONS
+       Tight, wide, logarithmic, irregular
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">03</span>
+      <span class="st">Spacing Variations</span>
+      <span class="sd">Tight · wide · logarithmic · irregular interval</span>
+    </div>
+    <div class="grid-4">
+
+      <!-- Very tight — lines almost touching -->
+      <div class="card nr">
+        <span class="tag">Tight · 4px gap</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="88"  x2="208" y2="88"  stroke="#f2ede4" stroke-width="2"   opacity="0.92"/>
+          <line x1="52" y1="96"  x2="208" y2="96"  stroke="#f2ede4" stroke-width="1.5" opacity="0.72"/>
+          <line x1="52" y1="103" x2="208" y2="103" stroke="#f2ede4" stroke-width="1.1" opacity="0.52"/>
+          <line x1="52" y1="109" x2="208" y2="109" stroke="#f2ede4" stroke-width="0.7" opacity="0.33"/>
+          <line x1="52" y1="114" x2="208" y2="114" stroke="#f2ede4" stroke-width="0.45" opacity="0.18"/>
+          <line x1="52" y1="118" x2="208" y2="118" stroke="#f2ede4" stroke-width="0.25" opacity="0.09"/>
+          <text x="130" y="175" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Wide spacing — breathing room -->
+      <div class="card wm">
+        <span class="tag">Wide · generous interval</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="54"  x2="208" y2="54"  stroke="#111" stroke-width="2.2" opacity="0.88"/>
+          <line x1="52" y1="80"  x2="208" y2="80"  stroke="#111" stroke-width="1.6" opacity="0.65"/>
+          <line x1="52" y1="104" x2="208" y2="104" stroke="#111" stroke-width="1.1" opacity="0.44"/>
+          <line x1="52" y1="126" x2="208" y2="126" stroke="#111" stroke-width="0.7" opacity="0.28"/>
+          <line x1="52" y1="146" x2="208" y2="146" stroke="#111" stroke-width="0.4" opacity="0.15"/>
+          <line x1="52" y1="164" x2="208" y2="164" stroke="#111" stroke-width="0.2" opacity="0.07"/>
+          <text x="130" y="204" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="224" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Logarithmic — gaps get larger -->
+      <div class="card sg">
+        <span class="tag">Logarithmic · expanding gap</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52" y1="64"  x2="208" y2="64"  stroke="#f2ede4" stroke-width="1.6" opacity="0.9"/>
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="1.3" opacity="0.72"/>
+          <line x1="52" y1="84"  x2="208" y2="84"  stroke="#f2ede4" stroke-width="1"   opacity="0.52"/>
+          <line x1="52" y1="102" x2="208" y2="102" stroke="#f2ede4" stroke-width="0.7" opacity="0.34"/>
+          <line x1="52" y1="128" x2="208" y2="128" stroke="#f2ede4" stroke-width="0.45" opacity="0.19"/>
+          <line x1="52" y1="164" x2="208" y2="164" stroke="#f2ede4" stroke-width="0.25" opacity="0.09"/>
+          <text x="130" y="200" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="220" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Fibonacci spacing — gaps follow golden ratio -->
+      <div class="card lt">
+        <span class="tag">Fibonacci · golden ratio spacing</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Gaps: 8, 13, 21, 34, 55 — Fibonacci -->
+          <line x1="52" y1="54"  x2="208" y2="54"  stroke="#111" stroke-width="1.8" opacity="0.9"/>
+          <line x1="52" y1="62"  x2="208" y2="62"  stroke="#111" stroke-width="1.4" opacity="0.72"/>
+          <line x1="52" y1="75"  x2="208" y2="75"  stroke="#111" stroke-width="1"   opacity="0.52"/>
+          <line x1="52" y1="96"  x2="208" y2="96"  stroke="#111" stroke-width="0.65" opacity="0.34"/>
+          <line x1="52" y1="130" x2="208" y2="130" stroke="#111" stroke-width="0.4"  opacity="0.18"/>
+          <line x1="52" y1="185" x2="208" y2="185" stroke="#111" stroke-width="0.2"  opacity="0.08"/>
+          <text x="130" y="218" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#111" letter-spacing="7" opacity="0.85">SIXTH ELEMENT</text>
+          <text x="130" y="234" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5"
+            fill="#111" opacity="0.22" letter-spacing="2">1 · 1 · 2 · 3 · 5 · 8</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       04 — ROAST DATA RULES
+       Lines whose properties encode real roast data
+       Height = temperature. Weight = RoR.
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">04</span>
+      <span class="st">Roast Data Rules</span>
+      <span class="sd">Lines that encode real numbers · temperature · DTR · development</span>
+    </div>
+    <div class="grid-4">
+
+      <!-- 6 lines whose lengths encode roast temps at 6 stages -->
+      <div class="card dk">
+        <span class="tag">Temp-encoded length</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Temps at 6 stages: ~160, 170, 180, 190, 204, 215°C
+               Normalized to line length: 160→80px, 215→156px -->
+          <line x1="52" y1="72"  x2="112" y2="72"  stroke="#f2ede4" stroke-width="1.4" opacity="0.88"/>
+          <!-- 170 -->
+          <line x1="52" y1="88"  x2="122" y2="88"  stroke="#f2ede4" stroke-width="1.4" opacity="0.72"/>
+          <!-- 180 -->
+          <line x1="52" y1="104" x2="135" y2="104" stroke="#f2ede4" stroke-width="1.4" opacity="0.56"/>
+          <!-- 190 -->
+          <line x1="52" y1="120" x2="148" y2="120" stroke="#f2ede4" stroke-width="1.4" opacity="0.4"/>
+          <!-- 204 FC -->
+          <line x1="52" y1="136" x2="165" y2="136" stroke="#f2ede4" stroke-width="1.8" opacity="0.62"/>
+          <!-- FC dot marker -->
+          <circle cx="165" cy="136" r="2.5" fill="#f2ede4" opacity="0.5"/>
+          <!-- 215 end -->
+          <line x1="52" y1="152" x2="180" y2="152" stroke="#f2ede4" stroke-width="2.2" opacity="0.85"/>
+          <!-- Temp annotations -->
+          <text x="186" y="76"  font-family="'DM Mono', monospace" font-size="5.5" fill="#f2ede4" opacity="0.22">160°</text>
+          <text x="186" y="140" font-family="'DM Mono', monospace" font-size="5.5" fill="#f2ede4" opacity="0.22">FC</text>
+          <text x="186" y="156" font-family="'DM Mono', monospace" font-size="5.5" fill="#f2ede4" opacity="0.22">215°</text>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- DTR encoded as gap between lines 5 and 6 -->
+      <div class="card cr">
+        <span class="tag">DTR gap · 23.2% development</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- 5 drying/Maillard phase lines tight -->
+          <line x1="52" y1="68"  x2="208" y2="68"  stroke="#111" stroke-width="1.8" opacity="0.88"/>
+          <line x1="52" y1="82"  x2="208" y2="82"  stroke="#111" stroke-width="1.4" opacity="0.7"/>
+          <line x1="52" y1="95"  x2="208" y2="95"  stroke="#111" stroke-width="1"   opacity="0.52"/>
+          <line x1="52" y1="107" x2="208" y2="107" stroke="#111" stroke-width="0.7" opacity="0.36"/>
+          <line x1="52" y1="118" x2="208" y2="118" stroke="#111" stroke-width="0.4" opacity="0.2"/>
+          <!-- Gap = DTR — then development phase line -->
+          <text x="218" y="133" font-family="'DM Mono', monospace" font-size="5" fill="#111" opacity="0.3">DTR</text>
+          <line x1="52" y1="148" x2="208" y2="148" stroke="#111" stroke-width="2.2" opacity="0.85"/>
+          <!-- Label -->
+          <text x="130" y="188" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="208" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+          <text x="130" y="226" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.22" letter-spacing="2">DTR 23.2% · 215°C</text>
+        </svg>
+      </div>
+
+      <!-- RoR as weight — highest RoR = thickest line -->
+      <div class="card sg">
+        <span class="tag">RoR as stroke weight</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- RoR profile: low start, peaks mid-roast, drops at FC -->
+          <line x1="52" y1="72"  x2="208" y2="72"  stroke="#f2ede4" stroke-width="0.6" opacity="0.4"/>
+          <!-- RoR rising -->
+          <line x1="52" y1="90"  x2="208" y2="90"  stroke="#f2ede4" stroke-width="1.4" opacity="0.62"/>
+          <!-- RoR peak -->
+          <line x1="52" y1="108" x2="208" y2="108" stroke="#f2ede4" stroke-width="3"   opacity="0.88"/>
+          <!-- RoR decline -->
+          <line x1="52" y1="126" x2="208" y2="126" stroke="#f2ede4" stroke-width="1.8" opacity="0.65"/>
+          <!-- Post FC flattening -->
+          <line x1="52" y1="142" x2="208" y2="142" stroke="#f2ede4" stroke-width="0.9" opacity="0.38"/>
+          <!-- End -->
+          <line x1="52" y1="156" x2="208" y2="156" stroke="#f2ede4" stroke-width="0.4" opacity="0.18"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+          <text x="130" y="232" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5"
+            fill="#f2ede4" opacity="0.2" letter-spacing="2">RATE OF RISE</text>
+        </svg>
+      </div>
+
+      <!-- Lines as timeline bars — like a Gantt of roast phases -->
+      <div class="card lt">
+        <span class="tag">Phase timeline</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Drying phase: starts at 0, ends ~40% -->
+          <line x1="52" y1="72"  x2="118" y2="72"  stroke="#111" stroke-width="2.5" opacity="0.82"/>
+          <text x="120" y="76" font-family="'DM Mono', monospace" font-size="5" fill="#111" opacity="0.28">DRYING</text>
+          <!-- Maillard 1 -->
+          <line x1="52" y1="90"  x2="148" y2="90"  stroke="#111" stroke-width="1.8" opacity="0.65"/>
+          <!-- Maillard 2 -->
+          <line x1="52" y1="106" x2="162" y2="106" stroke="#111" stroke-width="1.3" opacity="0.5"/>
+          <!-- Development starts -->
+          <line x1="52" y1="122" x2="178" y2="122" stroke="#111" stroke-width="1.8" opacity="0.65"/>
+          <text x="180" y="126" font-family="'DM Mono', monospace" font-size="5" fill="#111" opacity="0.28">FC</text>
+          <!-- Post-FC -->
+          <line x1="52" y1="138" x2="194" y2="138" stroke="#111" stroke-width="2.2" opacity="0.78"/>
+          <!-- Drop -->
+          <line x1="52" y1="154" x2="208" y2="154" stroke="#111" stroke-width="2.8" opacity="0.88"/>
+          <text x="130" y="194" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="214" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       05 — ANGLE & ORIENTATION
+       Rules that tilt, converge, radiate
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">05</span>
+      <span class="st">Angle & Orientation</span>
+      <span class="sd">Tilt · converge · radiate · perspective</span>
+    </div>
+    <div class="grid-4">
+
+      <!-- Slight tilt — almost horizontal but not quite -->
+      <div class="card ch">
+        <span class="tag">Micro tilt · 2°</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="48" y1="70"  x2="212" y2="74"  stroke="#f2ede4" stroke-width="1.8" opacity="0.9"/>
+          <line x1="48" y1="87"  x2="212" y2="91"  stroke="#f2ede4" stroke-width="1.3" opacity="0.68"/>
+          <line x1="48" y1="103" x2="212" y2="107" stroke="#f2ede4" stroke-width="0.9" opacity="0.48"/>
+          <line x1="48" y1="118" x2="212" y2="122" stroke="#f2ede4" stroke-width="0.6" opacity="0.3"/>
+          <line x1="48" y1="132" x2="212" y2="136" stroke="#f2ede4" stroke-width="0.38" opacity="0.17"/>
+          <line x1="48" y1="145" x2="212" y2="149" stroke="#f2ede4" stroke-width="0.2" opacity="0.08"/>
+          <text x="130" y="190" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="210" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Converging to right vanishing point — perspective -->
+      <div class="card wm">
+        <span class="tag">Perspective · vanishing right</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- All lines converge toward right VP at ~(220, 112) -->
+          <line x1="52" y1="62"  x2="220" y2="108" stroke="#111" stroke-width="1.6" opacity="0.85"/>
+          <line x1="52" y1="80"  x2="220" y2="108" stroke="#111" stroke-width="1.2" opacity="0.65"/>
+          <line x1="52" y1="98"  x2="220" y2="108" stroke="#111" stroke-width="0.9" opacity="0.48"/>
+          <line x1="52" y1="116" x2="220" y2="108" stroke="#111" stroke-width="0.6" opacity="0.32"/>
+          <line x1="52" y1="134" x2="220" y2="108" stroke="#111" stroke-width="0.38" opacity="0.18"/>
+          <line x1="52" y1="152" x2="220" y2="108" stroke="#111" stroke-width="0.2" opacity="0.09"/>
+          <!-- VP dot -->
+          <circle cx="220" cy="108" r="2" fill="#111" opacity="0.4"/>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Radiating from center bottom -->
+      <div class="card dk">
+        <span class="tag">Radiate · fan from base</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- 6 lines fanning from single point at bottom center -->
+          <line x1="130" y1="175" x2="42"  y2="58"  stroke="#f2ede4" stroke-width="1.8" opacity="0.9"/>
+          <line x1="130" y1="175" x2="76"  y2="52"  stroke="#f2ede4" stroke-width="1.4" opacity="0.7"/>
+          <line x1="130" y1="175" x2="112" y2="50"  stroke="#f2ede4" stroke-width="1"   opacity="0.5"/>
+          <line x1="130" y1="175" x2="148" y2="50"  stroke="#f2ede4" stroke-width="0.65" opacity="0.33"/>
+          <line x1="130" y1="175" x2="184" y2="52"  stroke="#f2ede4" stroke-width="0.38" opacity="0.18"/>
+          <line x1="130" y1="175" x2="218" y2="58"  stroke="#f2ede4" stroke-width="0.2"  opacity="0.09"/>
+          <!-- Origin dot -->
+          <circle cx="130" cy="175" r="2.5" fill="#f2ede4" opacity="0.5"/>
+          <text x="130" y="214" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#f2ede4" letter-spacing="7" opacity="0.88">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+      <!-- Lines stepping — like a staircase -->
+      <div class="card cr">
+        <span class="tag">Staircase · offset step</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <line x1="52"  y1="72"  x2="208" y2="72"  stroke="#111" stroke-width="1.6" opacity="0.9"/>
+          <line x1="68"  y1="90"  x2="208" y2="90"  stroke="#111" stroke-width="1.3" opacity="0.72"/>
+          <line x1="84"  y1="108" x2="208" y2="108" stroke="#111" stroke-width="1"   opacity="0.54"/>
+          <line x1="100" y1="126" x2="208" y2="126" stroke="#111" stroke-width="0.7" opacity="0.37"/>
+          <line x1="116" y1="144" x2="208" y2="144" stroke="#111" stroke-width="0.45" opacity="0.22"/>
+          <line x1="132" y1="162" x2="208" y2="162" stroke="#111" stroke-width="0.25" opacity="0.1"/>
+          <!-- Step connectors -->
+          <line x1="68"  y1="72"  x2="68"  y2="90"  stroke="#111" stroke-width="0.4" opacity="0.2"/>
+          <line x1="84"  y1="90"  x2="84"  y2="108" stroke="#111" stroke-width="0.4" opacity="0.18"/>
+          <line x1="100" y1="108" x2="100" y2="126" stroke="#111" stroke-width="0.4" opacity="0.14"/>
+          <line x1="116" y1="126" x2="116" y2="144" stroke="#111" stroke-width="0.4" opacity="0.1"/>
+          <line x1="132" y1="144" x2="132" y2="162" stroke="#111" stroke-width="0.4" opacity="0.07"/>
+          <text x="130" y="202" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="222" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       06 — FULL LOCKUPS
+       The strongest versions, application-ready
+       ════════════════════════════════════════ -->
+  <div class="section">
+    <div class="section-header">
+      <span class="sn">06</span>
+      <span class="st">Full Lockups · Best in Show</span>
+      <span class="sd">Application-ready · bag label · profile · stamp</span>
+    </div>
+    <div class="grid-3">
+
+      <!-- HERO DARK — Left anchor fade + full lockup -->
+      <div class="card dk" style="aspect-ratio: 4/5;">
+        <span class="tag">Hero · Dark</span>
+        <svg width="300" height="380" viewBox="0 0 300 380">
+          <line x1="40" y1="72" x2="260" y2="72" stroke="#f2ede4" stroke-width="0.6" opacity="0.3"/>
+          <!-- Six rules — left anchor fade -->
+          <line x1="40" y1="96"  x2="260" y2="96"  stroke="#f2ede4" stroke-width="2.2" opacity="0.9"/>
+          <line x1="40" y1="112" x2="230" y2="112" stroke="#f2ede4" stroke-width="1.6" opacity="0.68"/>
+          <line x1="40" y1="126" x2="200" y2="126" stroke="#f2ede4" stroke-width="1.1" opacity="0.48"/>
+          <line x1="40" y1="138" x2="168" y2="138" stroke="#f2ede4" stroke-width="0.7" opacity="0.3"/>
+          <line x1="40" y1="148" x2="136" y2="148" stroke="#f2ede4" stroke-width="0.4" opacity="0.16"/>
+          <line x1="40" y1="156" x2="104" y2="156" stroke="#f2ede4" stroke-width="0.2" opacity="0.08"/>
+          <line x1="40" y1="168" x2="260" y2="168" stroke="#f2ede4" stroke-width="0.6" opacity="0.3"/>
+          <!-- SIXTH -->
+          <text x="150" y="208" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28"
+            fill="#f2ede4" letter-spacing="12" opacity="0.92">SIXTH</text>
+          <!-- ELEMENT -->
+          <text x="150" y="240" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28"
+            fill="#f2ede4" letter-spacing="12" opacity="0.92">ELEMENT</text>
+          <line x1="40" y1="254" x2="260" y2="254" stroke="#f2ede4" stroke-width="0.6" opacity="0.3"/>
+          <text x="150" y="276" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="7"
+            fill="#f2ede4" letter-spacing="5" opacity="0.2">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <!-- HERO LIGHT -->
+      <div class="card cr" style="aspect-ratio: 4/5;">
+        <span class="tag">Hero · Light</span>
+        <svg width="300" height="380" viewBox="0 0 300 380">
+          <line x1="40" y1="72" x2="260" y2="72" stroke="#111" stroke-width="0.6" opacity="0.25"/>
+          <!-- Weight + length double fade -->
+          <line x1="40" y1="96"  x2="260" y2="96"  stroke="#111" stroke-width="2.2" opacity="0.88"/>
+          <line x1="40" y1="112" x2="230" y2="112" stroke="#111" stroke-width="1.6" opacity="0.65"/>
+          <line x1="40" y1="126" x2="200" y2="126" stroke="#111" stroke-width="1.1" opacity="0.46"/>
+          <line x1="40" y1="138" x2="168" y2="138" stroke="#111" stroke-width="0.7" opacity="0.29"/>
+          <line x1="40" y1="148" x2="136" y2="148" stroke="#111" stroke-width="0.4" opacity="0.15"/>
+          <line x1="40" y1="156" x2="104" y2="156" stroke="#111" stroke-width="0.2" opacity="0.07"/>
+          <line x1="40" y1="168" x2="260" y2="168" stroke="#111" stroke-width="0.6" opacity="0.25"/>
+          <text x="150" y="208" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28"
+            fill="#111" letter-spacing="12" opacity="0.9">SIXTH</text>
+          <text x="150" y="240" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28"
+            fill="#111" letter-spacing="12" opacity="0.9">ELEMENT</text>
+          <line x1="40" y1="254" x2="260" y2="254" stroke="#111" stroke-width="0.6" opacity="0.25"/>
+          <text x="150" y="276" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="7"
+            fill="#111" letter-spacing="5" opacity="0.22">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <!-- Mark only — for profile -->
+      <div class="card nr" style="aspect-ratio: 4/5;">
+        <span class="tag">Mark only · Profile</span>
+        <svg width="300" height="380" viewBox="0 0 300 380">
+          <!-- Mark centered, generous breathing room -->
+          <line x1="68" y1="138" x2="232" y2="138" stroke="#f2ede4" stroke-width="3"    opacity="0.92"/>
+          <line x1="68" y1="158" x2="210" y2="158" stroke="#f2ede4" stroke-width="2.2"  opacity="0.7"/>
+          <line x1="68" y1="175" x2="186" y2="175" stroke="#f2ede4" stroke-width="1.5"  opacity="0.5"/>
+          <line x1="68" y1="190" x2="160" y2="190" stroke="#f2ede4" stroke-width="0.9"  opacity="0.32"/>
+          <line x1="68" y1="203" x2="134" y2="203" stroke="#f2ede4" stroke-width="0.5"  opacity="0.17"/>
+          <line x1="68" y1="214" x2="108" y2="214" stroke="#f2ede4" stroke-width="0.25" opacity="0.08"/>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Typography Exploration</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300&family=Montserrat:wght@100;200;300;400&family=Raleway:wght@100;200;300;400&family=Josefin+Sans:wght@100;200;300;400&family=Tenor+Sans&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f0ece5;
+      min-height: 100vh;
+      padding: 3rem 2rem;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .page-header p {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.6rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    /* CARBON SVG mark — reusable */
+    .mark-svg-dark { color: #0a0a0a; }
+    .mark-svg-light { color: #f4f0eb; }
+
+    /* Grid */
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px;
+      max-width: 1100px;
+      margin: 0 auto 3px;
+    }
+
+    .type-card {
+      background: #fff;
+      padding: 4rem 3.5rem;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      gap: 2rem;
+    }
+
+    .type-card.dark {
+      background: #0a0a0a;
+    }
+
+    .type-tag {
+      position: absolute;
+      top: 1.2rem;
+      left: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.5rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+
+    .type-card.dark .type-tag { color: #333; }
+
+    .type-name {
+      position: absolute;
+      bottom: 1.2rem;
+      right: 1.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.48rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+
+    .type-card.dark .type-name { color: #333; }
+
+    /* Logo lockup base */
+    .lockup {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    .lockup-h {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.8rem;
+    }
+
+    .divider-v {
+      width: 1px;
+      height: 40px;
+      background: #0a0a0a;
+      opacity: 0.2;
+    }
+
+    .type-card.dark .divider-v {
+      background: #f4f0eb;
+    }
+
+    /* ---- OPTION A: Cormorant Garamond (current) ---- */
+    .opt-a-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-a-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.42rem;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.55;
+    }
+    .type-card.dark .opt-a-main { color: #f4f0eb; }
+    .type-card.dark .opt-a-sub { color: #f4f0eb; }
+
+    /* ---- OPTION B: Playfair Display ---- */
+    .opt-b-main {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: 1.35rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-b-sub {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 0.42rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.5;
+    }
+    .type-card.dark .opt-b-main { color: #f4f0eb; }
+    .type-card.dark .opt-b-sub { color: #f4f0eb; }
+
+    /* ---- OPTION C: DM Serif Display italic ---- */
+    .opt-c-main {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.7rem;
+      letter-spacing: 0.05em;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-c-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.42rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.5;
+    }
+    .type-card.dark .opt-c-main { color: #f4f0eb; }
+    .type-card.dark .opt-c-sub { color: #f4f0eb; }
+
+    /* ---- OPTION D: Bodoni Moda ---- */
+    .opt-d-main {
+      font-family: 'Bodoni Moda', serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-d-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.4rem;
+      letter-spacing: 0.65em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.5;
+    }
+    .type-card.dark .opt-d-main { color: #f4f0eb; }
+    .type-card.dark .opt-d-sub { color: #f4f0eb; }
+
+    /* ---- OPTION E: Libre Baskerville ---- */
+    .opt-e-main {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 400;
+      font-size: 1.1rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-e-sub {
+      font-family: 'Tenor Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.42rem;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+    }
+    .type-card.dark .opt-e-main { color: #f4f0eb; }
+    .type-card.dark .opt-e-sub { color: #f4f0eb; }
+
+    /* ---- OPTION F: Cormorant italic + Josefin ---- */
+    .opt-f-top {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.5rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+    }
+    .opt-f-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 2.4rem;
+      letter-spacing: 0.02em;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-f-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.42rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+    }
+    .type-card.dark .opt-f-top { color: #f4f0eb; }
+    .type-card.dark .opt-f-main { color: #f4f0eb; }
+    .type-card.dark .opt-f-sub { color: #f4f0eb; }
+
+    /* ---- OPTION G: Bodoni italic ---- */
+    .opt-g-main {
+      font-family: 'Bodoni Moda', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.8rem;
+      letter-spacing: 0.08em;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-g-sub {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 200;
+      font-size: 0.4rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+    }
+    .type-card.dark .opt-g-main { color: #f4f0eb; }
+    .type-card.dark .opt-g-sub { color: #f4f0eb; }
+
+    /* ---- OPTION H: All caps minimal Josefin ---- */
+    .opt-h-main {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .opt-h-rule {
+      width: 100%;
+      height: 1px;
+      background: #0a0a0a;
+      opacity: 0.15;
+    }
+    .opt-h-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.42rem;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.4;
+    }
+    .type-card.dark .opt-h-main { color: #f4f0eb; }
+    .type-card.dark .opt-h-rule { background: #f4f0eb; }
+    .type-card.dark .opt-h-sub { color: #f4f0eb; }
+
+    /* Bottom comparison row */
+    .compare-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 1100px;
+      margin: 3px auto 0;
+    }
+
+    .compare-card {
+      background: #0a0a0a;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.4rem;
+      min-height: 240px;
+      position: relative;
+    }
+
+    .compare-label {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 200;
+      font-size: 0.45rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #333;
+      white-space: nowrap;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <p>Sixth Element Coffee Roasters · Typography Exploration · 8 Directions</p>
+  </div>
+
+  <!-- CARBON SVG shorthand as inline template -->
+  <!-- White bg cards use dark mark -->
+
+  <div class="type-grid">
+
+    <!-- A: Cormorant Garamond upright (current baseline) -->
+    <div class="type-card">
+      <span class="type-tag">A — Current Baseline</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-a-main">Sixth Element</div>
+          <div class="opt-a-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Cormorant Garamond 300 + Montserrat 200</span>
+    </div>
+
+    <!-- B: Playfair Display -->
+    <div class="type-card dark">
+      <span class="type-tag">B — Editorial Serif</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-b-main">Sixth Element</div>
+          <div class="opt-b-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Playfair Display 400 + Raleway 200</span>
+    </div>
+
+    <!-- C: DM Serif Italic -->
+    <div class="type-card">
+      <span class="type-tag">C — Italic Drama</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-c-main">Sixth Element</div>
+          <div class="opt-c-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">DM Serif Display Italic + Josefin Sans 100</span>
+    </div>
+
+    <!-- D: Bodoni Moda -->
+    <div class="type-card dark">
+      <span class="type-tag">D — High Fashion</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-d-main">Sixth Element</div>
+          <div class="opt-d-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Bodoni Moda 300 + Josefin Sans 100</span>
+    </div>
+
+    <!-- E: Libre Baskerville -->
+    <div class="type-card">
+      <span class="type-tag">E — Classic Authority</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-e-main">Sixth Element</div>
+          <div class="opt-e-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Libre Baskerville 400 + Tenor Sans</span>
+    </div>
+
+    <!-- F: Cormorant italic large -->
+    <div class="type-card dark">
+      <span class="type-tag">F — Refined Italic</span>
+      <div class="lockup">
+        <svg width="42" height="42" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-f-top" style="margin-bottom:0.4rem">New York</div>
+          <div class="opt-f-main">Sixth Element</div>
+          <div class="opt-f-sub" style="margin-top:0.5rem">Coffee Roasters</div>
+        </div>
+      </div>
+      <span class="type-name">Cormorant Garamond Italic 300 + Josefin 100</span>
+    </div>
+
+    <!-- G: Bodoni Italic -->
+    <div class="type-card">
+      <span class="type-tag">G — Bodoni Italic</span>
+      <div class="lockup">
+        <svg width="54" height="54" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center">
+          <div class="opt-g-main">Sixth Element</div>
+          <div class="opt-g-sub" style="margin-top:0.6rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Bodoni Moda Italic 300 + Raleway 200</span>
+    </div>
+
+    <!-- H: All caps geometric minimal -->
+    <div class="type-card dark">
+      <span class="type-tag">H — Pure Geometric</span>
+      <div class="lockup">
+        <svg width="44" height="44" viewBox="0 0 72 72" fill="none">
+          <polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+          <polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/>
+          <line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/>
+          <circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/>
+        </svg>
+        <div style="text-align:center; width: 200px">
+          <div class="opt-h-main">Sixth Element</div>
+          <div class="opt-h-rule" style="margin: 0.8rem 0;"></div>
+          <div class="opt-h-sub">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="type-name">Josefin Sans 300 + Josefin Sans 100</span>
+    </div>
+
+  </div>
+
+  <!-- Bottom: quick dark-bg comparison of favourites -->
+  <div style="max-width:1100px; margin: 3px auto 0; font-family:'Montserrat',sans-serif; font-weight:200; font-size:0.55rem; letter-spacing:0.4em; text-transform:uppercase; color:#aaa; padding: 2rem 0 1rem;">
+    Which feels right for Sixth Element?
+  </div>
+
+</body>
+</html>

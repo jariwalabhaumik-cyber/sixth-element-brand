@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Logo Explorations III</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0e0d0a;
+      padding: 5rem 3rem 8rem;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .page-title {
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.48rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #2e2c26;
+      margin-bottom: 0.8rem;
+    }
+    .page-sub {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: #38362e;
+      margin-bottom: 5rem;
+    }
+    .concept { max-width: 1300px; margin: 0 auto 6rem; }
+    .concept-header {
+      display: flex; align-items: baseline; gap: 1.5rem;
+      padding-bottom: 0.7rem;
+      border-bottom: 1px solid #181610;
+      margin-bottom: 3px;
+    }
+    .cn { font-family: 'DM Mono', monospace; font-weight: 300; font-size: 0.4rem; letter-spacing: 0.4em; color: #28261e; }
+    .ct { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; font-size: 1.05rem; color: #504e46; letter-spacing: 0.03em; }
+    .cd { font-family: 'Josefin Sans', sans-serif; font-weight: 100; font-size: 0.38rem; letter-spacing: 0.4em; color: #201e18; text-transform: uppercase; margin-left: auto; }
+
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
+
+    .card {
+      aspect-ratio: 1;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+    }
+    .card.wide { aspect-ratio: 4/3; }
+
+    .tag {
+      position: absolute; top: 1rem; left: 1.2rem;
+      font-family: 'DM Mono', monospace; font-weight: 300;
+      font-size: 0.36rem; letter-spacing: 0.35em; text-transform: uppercase;
+    }
+    .dk  { background: #0b0a08; } .dk  .tag { color: #1c1a14; }
+    .lt  { background: #f2ede4; } .lt  .tag { color: #bbb8b0; }
+    .cr  { background: #f8f4eb; } .cr  .tag { color: #c4c0b8; }
+    .ch  { background: #090807; } .ch  .tag { color: #181610; }
+    .wm  { background: #faf6ee; } .wm  .tag { color: #ccc8c0; }
+    .sg  { background: #181610; } .sg  .tag { color: #262418; }
+    .st  { background: #e8e3da; } .st  .tag { color: #b4b0a8; }
+    .nr  { background: #070605; } .nr  .tag { color: #141210; }
+    .gn  { background: #f4f0e7; } .gn  .tag { color: #c4c0b8; }
+    .md  { background: #141210; } .md  .tag { color: #222018; }
+    .oc  { background: #1e1a0e; } .oc  .tag { color: #2c2818; }
+    .ec  { background: #edeae2; } .ec  .tag { color: #b8b4ac; }
+  </style>
+</head>
+<body>
+
+  <p class="page-title">Sixth Element Coffee Roasters · Logo Explorations III</p>
+  <p class="page-sub">Six new directions — geometry, language, science, craft</p>
+
+
+  <!-- ══════════════════════════════════
+       G — SPECIMEN LABEL
+       Like a botanical / scientific specimen tag
+       Natural history museum meets specialty coffee
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">G</span>
+      <span class="ct">Specimen Label</span>
+      <span class="cd">Botanical · scientific · natural history · taxonomy</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">G1 · Herbarium</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Oval specimen border -->
+          <ellipse cx="130" cy="125" rx="100" ry="72" fill="none" stroke="#f2ede4" stroke-width="0.9" opacity="0.6"/>
+          <ellipse cx="130" cy="125" rx="95"  ry="67" fill="none" stroke="#f2ede4" stroke-width="0.3" opacity="0.2"/>
+          <!-- Specimen name large italic -->
+          <text x="130" y="112" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="400" font-size="26"
+            fill="#f2ede4" opacity="0.92" letter-spacing="1">Sixth Element</text>
+          <!-- Divider hairline -->
+          <line x1="68" y1="122" x2="192" y2="122" stroke="#f2ede4" stroke-width="0.4" opacity="0.3"/>
+          <!-- Classification mono -->
+          <text x="130" y="134" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6"
+            fill="#f2ede4" opacity="0.35" letter-spacing="2">C · 06 · COFFEA ARABICA</text>
+          <text x="130" y="148" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#f2ede4" opacity="0.22" letter-spacing="2">HUILA · COLOMBIA · 2,100 m</text>
+          <!-- Bottom of oval -->
+          <text x="130" y="220" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#f2ede4" letter-spacing="5" opacity="0.2">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <div class="card cr">
+        <span class="tag">G2 · Rect specimen</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <rect x="30" y="46" width="200" height="150" fill="none" stroke="#111" stroke-width="0.9" opacity="0.55"/>
+          <rect x="34" y="50" width="192" height="142" fill="none" stroke="#111" stroke-width="0.3" opacity="0.2"/>
+          <!-- Specimen italic large -->
+          <text x="130" y="110" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="400" font-size="30"
+            fill="#111" opacity="0.88">Sixth Element</text>
+          <line x1="46" y1="120" x2="214" y2="120" stroke="#111" stroke-width="0.4" opacity="0.25"/>
+          <text x="130" y="133" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6"
+            fill="#111" opacity="0.38" letter-spacing="2">Coffea arabica · Castillo</text>
+          <text x="130" y="146" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.25" letter-spacing="2">Huila · Colombia · 2,100 m</text>
+          <text x="130" y="175" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#111" opacity="0.25" letter-spacing="4">COFFEE ROASTERS · NEW YORK</text>
+          <text x="130" y="222" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+            fill="#111" letter-spacing="6" opacity="0.6">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card sg">
+        <span class="tag">G3 · No border</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <text x="130" y="105" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="300" font-size="34"
+            fill="#f2ede4" opacity="0.88" letter-spacing="1">Sixth Element</text>
+          <line x1="42" y1="116" x2="218" y2="116" stroke="#f2ede4" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="130" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6.5"
+            fill="#f2ede4" opacity="0.3" letter-spacing="2">C · 06 · Coffea arabica</text>
+          <text x="130" y="143" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#f2ede4" opacity="0.2" letter-spacing="2">Huila · Colombia · 2,100 m</text>
+          <line x1="42" y1="154" x2="218" y2="154" stroke="#f2ede4" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="226" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#f2ede4" opacity="0.2" letter-spacing="4">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <div class="card st">
+        <span class="tag">G4 · Circular stamp</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <circle cx="130" cy="125" r="92" fill="none" stroke="#111" stroke-width="0.9" opacity="0.55"/>
+          <circle cx="130" cy="125" r="86" fill="none" stroke="#111" stroke-width="0.3" opacity="0.2"/>
+          <!-- Arc text top — SIXTH ELEMENT -->
+          <path id="topArc" d="M 55,125 A 75,75 0 0,1 205,125" fill="none"/>
+          <text font-family="'Josefin Sans', sans-serif" font-weight="200" font-size="7" fill="#111" opacity="0.5" letter-spacing="5">
+            <textPath href="#topArc" startOffset="50%" text-anchor="middle">SIXTH ELEMENT COFFEE ROASTERS</textPath>
+          </text>
+          <!-- Arc text bottom -->
+          <path id="botArc" d="M 55,125 A 75,75 0 0,0 205,125" fill="none"/>
+          <text font-family="'DM Mono', monospace" font-weight="300" font-size="6" fill="#111" opacity="0.3" letter-spacing="3">
+            <textPath href="#botArc" startOffset="50%" text-anchor="middle">NEW YORK · EST. 2025</textPath>
+          </text>
+          <!-- Center -->
+          <text x="130" y="114" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="400" font-size="22"
+            fill="#111" opacity="0.85">Sixth</text>
+          <text x="130" y="138" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="400" font-size="22"
+            fill="#111" opacity="0.85">Element</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       H — MOLECULAR / STRUCTURAL
+       Carbon atom, benzene ring, molecule
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">H</span>
+      <span class="ct">Molecular Structure</span>
+      <span class="cd">Carbon atom · benzene · covalent bonds · chemistry as craft</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">H1 · Benzene ring</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Benzene: hexagon + inner circle -->
+          <polygon points="130,52 170,75 170,121 130,144 90,121 90,75"
+            fill="none" stroke="#f2ede4" stroke-width="1.1" opacity="0.85"/>
+          <!-- Inner circle representing delocalized electrons -->
+          <circle cx="130" cy="98" r="24" fill="none" stroke="#f2ede4" stroke-width="0.6" opacity="0.35"/>
+          <!-- C label center -->
+          <text x="130" y="104" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-style="italic" font-weight="300" font-size="18"
+            fill="#f2ede4" opacity="0.7">C</text>
+          <text x="130" y="176" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="16"
+            fill="#f2ede4" letter-spacing="7" opacity="0.9">SIXTH</text>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="16"
+            fill="#f2ede4" letter-spacing="7" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card cr">
+        <span class="tag">H2 · Atom orbits</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Atomic model: nucleus + 2 elliptical orbits -->
+          <!-- Orbit 1 -->
+          <ellipse cx="130" cy="105" rx="78" ry="30" fill="none" stroke="#111" stroke-width="0.8" opacity="0.4"/>
+          <!-- Orbit 2 rotated -->
+          <ellipse cx="130" cy="105" rx="78" ry="30" fill="none" stroke="#111" stroke-width="0.8" opacity="0.4"
+            transform="rotate(60 130 105)"/>
+          <!-- Orbit 3 rotated -->
+          <ellipse cx="130" cy="105" rx="78" ry="30" fill="none" stroke="#111" stroke-width="0.8" opacity="0.4"
+            transform="rotate(-60 130 105)"/>
+          <!-- Nucleus -->
+          <circle cx="130" cy="105" r="7" fill="#111" stroke="#111" stroke-width="1" opacity="0.85"/>
+          <text x="130" y="109" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="7"
+            fill="#f8f4eb" opacity="0.9">6</text>
+          <text x="130" y="200" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#111" letter-spacing="6" opacity="0.88">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card ch">
+        <span class="tag">H3 · Graphene cell</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Fragment of graphene lattice — 4 connected hexagons -->
+          <!-- Center hex -->
+          <polygon points="130,72 152,84 152,108 130,120 108,108 108,84"
+            fill="none" stroke="#f2ede4" stroke-width="1" opacity="0.85"/>
+          <!-- Top hex -->
+          <polygon points="130,28 152,40 152,64 130,76 108,64 108,40"
+            fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.4"/>
+          <!-- Bottom left hex -->
+          <polygon points="86,108 108,120 108,144 86,156 64,144 64,120"
+            fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.4"/>
+          <!-- Bottom right hex -->
+          <polygon points="174,108 196,120 196,144 174,156 152,144 152,120"
+            fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.4"/>
+          <!-- Bottom center hex -->
+          <polygon points="130,116 152,128 152,152 130,164 108,152 108,128"
+            fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.25"/>
+          <text x="130" y="200" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#f2ede4" letter-spacing="6" opacity="0.88">SIXTH ELEMENT</text>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#f2ede4" opacity="0.22" letter-spacing="4">COFFEE ROASTERS</text>
+        </svg>
+      </div>
+
+      <div class="card wm">
+        <span class="tag">H4 · Bond lines</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Structural formula style — lines radiating from C -->
+          <circle cx="130" cy="105" r="6" fill="#111" opacity="0.8"/>
+          <text x="130" y="109" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="400" font-size="7"
+            fill="#faf6ee">C</text>
+          <!-- 4 bonds at tetrahedral angles -->
+          <line x1="130" y1="99"  x2="130" y2="56"  stroke="#111" stroke-width="1" opacity="0.55"/>
+          <line x1="130" y1="111" x2="130" y2="154" stroke="#111" stroke-width="1" opacity="0.55"/>
+          <line x1="124" y1="105" x2="78"  y2="105" stroke="#111" stroke-width="1" opacity="0.55"/>
+          <line x1="136" y1="105" x2="182" y2="105" stroke="#111" stroke-width="1" opacity="0.55"/>
+          <!-- Atom labels at bond ends -->
+          <text x="130" y="50" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-size="8" fill="#111" opacity="0.4">6</text>
+          <text x="130" y="165" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-size="8" fill="#111" opacity="0.4">6</text>
+          <text x="72"  y="109" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-size="8" fill="#111" opacity="0.4">6</text>
+          <text x="188" y="109" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-size="8" fill="#111" opacity="0.4">6</text>
+          <text x="130" y="210" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#111" letter-spacing="6" opacity="0.85">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       I — THE RULE SYSTEM
+       Logo built entirely from horizontal lines
+       Minimalism as philosophy
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">I</span>
+      <span class="ct">The Rule System</span>
+      <span class="cd">Lines only · rhythm · structure · restraint as identity</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">I1 · 6 rules</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- 6 horizontal lines at measured intervals — the 6th element expressed as lines -->
+          <line x1="42" y1="72"  x2="218" y2="72"  stroke="#f2ede4" stroke-width="1.8" opacity="0.9"/>
+          <line x1="42" y1="90"  x2="218" y2="90"  stroke="#f2ede4" stroke-width="1.2" opacity="0.65"/>
+          <line x1="42" y1="106" x2="218" y2="106" stroke="#f2ede4" stroke-width="0.8" opacity="0.42"/>
+          <line x1="42" y1="120" x2="218" y2="120" stroke="#f2ede4" stroke-width="0.55" opacity="0.28"/>
+          <line x1="42" y1="132" x2="218" y2="132" stroke="#f2ede4" stroke-width="0.4" opacity="0.18"/>
+          <line x1="42" y1="142" x2="218" y2="142" stroke="#f2ede4" stroke-width="0.28" opacity="0.1"/>
+          <text x="130" y="185" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="206" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card st">
+        <span class="tag">I2 · Interrupted rule</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- A single rule interrupted by the number 6 -->
+          <line x1="32" y1="100" x2="102" y2="100" stroke="#111" stroke-width="1.2" opacity="0.7"/>
+          <text x="130" y="107" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="400" font-size="18"
+            fill="#111" opacity="0.88">06</text>
+          <line x1="158" y1="100" x2="228" y2="100" stroke="#111" stroke-width="1.2" opacity="0.7"/>
+          <!-- Wordmark below -->
+          <text x="130" y="148" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="7" opacity="0.88">SIXTH</text>
+          <text x="130" y="168" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="17"
+            fill="#111" letter-spacing="7" opacity="0.88">ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card md">
+        <span class="tag">I3 · Barcode</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Barcode-like composition — varied widths and gaps — very Experimental Jetset -->
+          <rect x="46"  y="62" width="4"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="54"  y="62" width="2"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="60"  y="62" width="6"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="70"  y="62" width="2"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="76"  y="62" width="8"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="88"  y="62" width="3"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="95"  y="62" width="5"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="104" y="62" width="2"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <!-- Gap / center space for number -->
+          <rect x="116" y="54" width="3"  height="112" fill="#f2ede4" opacity="0.9"/>
+          <text x="130" y="120" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="400" font-size="16"
+            fill="#f2ede4" opacity="0.9">06</text>
+          <rect x="144" y="54" width="3"  height="112" fill="#f2ede4" opacity="0.9"/>
+          <!-- Right side bars -->
+          <rect x="152" y="62" width="6"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="162" y="62" width="2"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="168" y="62" width="5"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="177" y="62" width="3"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="184" y="62" width="7"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="195" y="62" width="2"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="201" y="62" width="4"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <rect x="209" y="62" width="5"  height="96" fill="#f2ede4" opacity="0.9"/>
+          <text x="130" y="186" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6"
+            fill="#f2ede4" opacity="0.3" letter-spacing="2">SIXTH ELEMENT · 06</text>
+        </svg>
+      </div>
+
+      <div class="card cr">
+        <span class="tag">I4 · Name as rule</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- The word SIXTH becomes a thick rule, ELEMENT becomes a thinner rule -->
+          <rect x="32" y="96"  width="196" height="14" fill="#111" opacity="0.88"/>
+          <rect x="32" y="116" width="196" height="7"  fill="#111" opacity="0.5"/>
+          <!-- Text inside the bars (white-on-dark) -->
+          <text x="130" y="108" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="700" font-size="11"
+            fill="#f8f4eb" letter-spacing="10" opacity="0.95">SIXTH</text>
+          <text x="130" y="121" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="500" font-size="7"
+            fill="#f8f4eb" letter-spacing="7" opacity="0.85">ELEMENT</text>
+          <text x="130" y="168" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6"
+            fill="#111" opacity="0.3" letter-spacing="3">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       J — THE ORIGIN MARK
+       Latitude / longitude / coordinates
+       Place as identity
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">J</span>
+      <span class="ct">Origin Mark</span>
+      <span class="cd">Coordinates · latitude · place encoded as identity</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">J1 · Crosshair</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Crosshair / reticle — pinpointing origin -->
+          <circle cx="130" cy="105" r="52" fill="none" stroke="#f2ede4" stroke-width="0.9" opacity="0.6"/>
+          <circle cx="130" cy="105" r="36" fill="none" stroke="#f2ede4" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="130" cy="105" r="4"  fill="#f2ede4" opacity="0.7"/>
+          <!-- Cross lines through circle -->
+          <line x1="32"  y1="105" x2="90"  y2="105" stroke="#f2ede4" stroke-width="0.7" opacity="0.5"/>
+          <line x1="170" y1="105" x2="228" y2="105" stroke="#f2ede4" stroke-width="0.7" opacity="0.5"/>
+          <line x1="130" y1="28"  x2="130" y2="66"  stroke="#f2ede4" stroke-width="0.7" opacity="0.5"/>
+          <line x1="130" y1="144" x2="130" y2="182" stroke="#f2ede4" stroke-width="0.7" opacity="0.5"/>
+          <!-- Coord label -->
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="6.5"
+            fill="#f2ede4" opacity="0.35" letter-spacing="2">1°52'N · 76°03'W</text>
+          <text x="130" y="222" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#f2ede4" letter-spacing="6" opacity="0.88">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card wm">
+        <span class="tag">J2 · Grid pin</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Light grid + pin -->
+          <line x1="50"  y1="60"  x2="50"  y2="165" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="90"  y1="60"  x2="90"  y2="165" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="130" y1="60"  x2="130" y2="165" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="170" y1="60"  x2="170" y2="165" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="210" y1="60"  x2="210" y2="165" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="42"  y1="80"  x2="218" y2="80"  stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="42"  y1="110" x2="218" y2="110" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <line x1="42"  y1="140" x2="218" y2="140" stroke="#111" stroke-width="0.3" opacity="0.12"/>
+          <!-- Pin drop at Huila Colombia -->
+          <circle cx="130" cy="105" r="10" fill="none" stroke="#111" stroke-width="1.2" opacity="0.7"/>
+          <circle cx="130" cy="105" r="3"  fill="#111" opacity="0.8"/>
+          <line x1="130" y1="115" x2="130" y2="145" stroke="#111" stroke-width="0.8" opacity="0.4"/>
+          <text x="130" y="184" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#111" letter-spacing="6" opacity="0.85">SIXTH ELEMENT</text>
+          <text x="130" y="200" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.28" letter-spacing="2">HUILA · COLOMBIA</text>
+        </svg>
+      </div>
+
+      <div class="card sg">
+        <span class="tag">J3 · Lat/Lon mark</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Just coordinates, typographically treated as the mark -->
+          <text x="130" y="82" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="11"
+            fill="#f2ede4" opacity="0.55" letter-spacing="2">1°52'N</text>
+          <line x1="60" y1="92" x2="200" y2="92" stroke="#f2ede4" stroke-width="0.4" opacity="0.2"/>
+          <text x="130" y="110" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="11"
+            fill="#f2ede4" opacity="0.55" letter-spacing="2">76°03'W</text>
+          <line x1="60" y1="120" x2="200" y2="120" stroke="#f2ede4" stroke-width="0.4" opacity="0.2"/>
+          <text x="130" y="140" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="11"
+            fill="#f2ede4" opacity="0.55" letter-spacing="2">2,100 m</text>
+          <line x1="44" y1="158" x2="216" y2="158" stroke="#f2ede4" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="185" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="18"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">SIXTH</text>
+          <text x="130" y="206" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="18"
+            fill="#f2ede4" letter-spacing="8" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card cr">
+        <span class="tag">J4 · Compass rose</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Minimal compass — 4 points + circle -->
+          <circle cx="130" cy="104" r="46" fill="none" stroke="#111" stroke-width="0.7" opacity="0.4"/>
+          <!-- N point tall -->
+          <polygon points="130,54 136,96 130,88 124,96" fill="#111" opacity="0.7"/>
+          <!-- S point short -->
+          <polygon points="130,154 134,112 130,120 126,112" fill="#111" opacity="0.28"/>
+          <!-- E point -->
+          <polygon points="180,104 138,98 146,104 138,110" fill="#111" opacity="0.28"/>
+          <!-- W point -->
+          <polygon points="80,104 122,98 114,104 122,110" fill="#111" opacity="0.28"/>
+          <!-- Center dot -->
+          <circle cx="130" cy="104" r="3" fill="#111" opacity="0.6"/>
+          <!-- N label -->
+          <text x="130" y="50" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="7"
+            fill="#111" opacity="0.35">N</text>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="15"
+            fill="#111" letter-spacing="6" opacity="0.85">SIXTH ELEMENT</text>
+          <text x="130" y="208" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.28" letter-spacing="2">HUILA · COLOMBIA</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       K — WEIGHT & BALANCE
+       The scale, the measure, the process
+       Precision as aesthetic
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">K</span>
+      <span class="ct">Weight & Measure</span>
+      <span class="cd">250g · precision · the scale · process made visible</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">K1 · Balance scale</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Minimal balance scale -->
+          <!-- Center post -->
+          <line x1="130" y1="62" x2="130" y2="158" stroke="#f2ede4" stroke-width="1" opacity="0.7"/>
+          <!-- Beam -->
+          <line x1="58" y1="82" x2="202" y2="82" stroke="#f2ede4" stroke-width="1.2" opacity="0.85"/>
+          <!-- Left pan string + pan -->
+          <line x1="72"  y1="82" x2="72"  y2="118" stroke="#f2ede4" stroke-width="0.7" opacity="0.55"/>
+          <line x1="186" y1="82" x2="186" y2="118" stroke="#f2ede4" stroke-width="0.7" opacity="0.55"/>
+          <ellipse cx="72"  cy="121" rx="22" ry="5" fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.6"/>
+          <ellipse cx="186" cy="121" rx="22" ry="5" fill="none" stroke="#f2ede4" stroke-width="0.7" opacity="0.6"/>
+          <!-- Pivot dot -->
+          <circle cx="130" cy="82" r="3" fill="#f2ede4" opacity="0.7"/>
+          <!-- Base -->
+          <line x1="102" y1="158" x2="158" y2="158" stroke="#f2ede4" stroke-width="1" opacity="0.5"/>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="16"
+            fill="#f2ede4" letter-spacing="7" opacity="0.9">SIXTH</text>
+          <text x="130" y="212" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="16"
+            fill="#f2ede4" letter-spacing="7" opacity="0.9">ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card ec">
+        <span class="tag">K2 · Gram weight</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- 250 large, g small — the dose as the mark -->
+          <text x="118" y="138" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="300" font-size="88"
+            fill="#111" opacity="0.82">6</text>
+          <text x="178" y="98" text-anchor="start"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="18"
+            fill="#111" opacity="0.3">th</text>
+          <line x1="38" y1="148" x2="222" y2="148" stroke="#111" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="170" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+            fill="#111" letter-spacing="6" opacity="0.7">ELEMENT</text>
+          <text x="130" y="188" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.25" letter-spacing="2">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <div class="card nr">
+        <span class="tag">K3 · Ratio mark</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Coffee ratio as the mark — 1:15 or 1:2 -->
+          <text x="130" y="98" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="18"
+            fill="#f2ede4" opacity="0.4" letter-spacing="2">RATIO</text>
+          <text x="130" y="152" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="300" font-size="72"
+            fill="#f2ede4" opacity="0.88">1:6</text>
+          <line x1="42" y1="162" x2="218" y2="162" stroke="#f2ede4" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+            fill="#f2ede4" letter-spacing="6" opacity="0.82">SIXTH ELEMENT</text>
+        </svg>
+      </div>
+
+      <div class="card st">
+        <span class="tag">K4 · Temperature</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- 215° as the mark — the end temperature -->
+          <text x="118" y="148" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="300" font-size="78"
+            fill="#111" opacity="0.85">215</text>
+          <text x="183" y="84" text-anchor="start"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="22"
+            fill="#111" opacity="0.45">°C</text>
+          <line x1="38" y1="156" x2="222" y2="156" stroke="#111" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="176" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+            fill="#111" letter-spacing="6" opacity="0.75">SIXTH ELEMENT</text>
+          <text x="130" y="192" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.25" letter-spacing="2">ESPRESSO ROAST · END TEMP</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════
+       L — LANGUAGE & POETRY
+       The name broken, recomposed, reversed
+       Typography as concept
+       ══════════════════════════════════ -->
+  <div class="concept">
+    <div class="concept-header">
+      <span class="cn">L</span>
+      <span class="ct">Language & Decomposition</span>
+      <span class="cd">The name broken · layered · reversed · type as concept</span>
+    </div>
+    <div class="grid-4">
+
+      <div class="card dk">
+        <span class="tag">L1 · Staggered</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Letters staggered vertically — descending -->
+          <text x="46"  y="90"  font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28" fill="#f2ede4" opacity="0.9" letter-spacing="2">S</text>
+          <text x="76"  y="106" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28" fill="#f2ede4" opacity="0.75" letter-spacing="2">I</text>
+          <text x="96"  y="122" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28" fill="#f2ede4" opacity="0.6"  letter-spacing="2">X</text>
+          <text x="120" y="138" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28" fill="#f2ede4" opacity="0.45" letter-spacing="2">T</text>
+          <text x="148" y="154" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="28" fill="#f2ede4" opacity="0.32" letter-spacing="2">H</text>
+          <text x="178" y="170" font-family="'DM Mono', monospace" font-weight="300" font-size="14" fill="#f2ede4" opacity="0.2" letter-spacing="1">06</text>
+          <text x="130" y="222" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#f2ede4" letter-spacing="5" opacity="0.22">SIXTH ELEMENT · COFFEE ROASTERS</text>
+        </svg>
+      </div>
+
+      <div class="card cr">
+        <span class="tag">L2 · Overprint</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- SIXTH and ELEMENT overlapping at an angle — Werkplaats Typografie feel -->
+          <text x="130" y="130" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="700" font-size="42"
+            fill="#111" opacity="0.12" letter-spacing="4"
+            transform="rotate(-8 130 130)">ELEMENT</text>
+          <text x="130" y="138" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="700" font-size="42"
+            fill="#111" opacity="0.88" letter-spacing="4">SIXTH</text>
+          <line x1="32" y1="150" x2="228" y2="150" stroke="#111" stroke-width="0.5" opacity="0.2"/>
+          <text x="130" y="170" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="500" font-size="14"
+            fill="#111" letter-spacing="7" opacity="0.5">ELEMENT</text>
+          <text x="130" y="210" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.22" letter-spacing="3">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+      <div class="card sg">
+        <span class="tag">L3 · Vertical stack</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- Reading downward, each letter stacked — Japanese-coded -->
+          <text x="130" y="70"  text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="24" fill="#f2ede4" opacity="0.9">S</text>
+          <text x="130" y="94"  text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="24" fill="#f2ede4" opacity="0.82">I</text>
+          <text x="130" y="118" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="24" fill="#f2ede4" opacity="0.74">X</text>
+          <text x="130" y="142" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="24" fill="#f2ede4" opacity="0.58">T</text>
+          <text x="130" y="166" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="600" font-size="24" fill="#f2ede4" opacity="0.42">H</text>
+          <line x1="112" y1="56" x2="112" y2="175" stroke="#f2ede4" stroke-width="0.4" opacity="0.18"/>
+          <line x1="148" y1="56" x2="148" y2="175" stroke="#f2ede4" stroke-width="0.4" opacity="0.18"/>
+          <text x="130" y="216" text-anchor="middle"
+            font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+            fill="#f2ede4" opacity="0.2" letter-spacing="4">ELEMENT · 06</text>
+        </svg>
+      </div>
+
+      <div class="card wm">
+        <span class="tag">L4 · Mirror</span>
+        <svg width="260" height="260" viewBox="0 0 260 260">
+          <!-- SIXTH mirrored — one reads normal, one flipped on horizontal axis -->
+          <text x="130" y="112" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="32"
+            fill="#111" opacity="0.88" letter-spacing="8">SIXTH</text>
+          <line x1="38" y1="120" x2="222" y2="120" stroke="#111" stroke-width="0.6" opacity="0.25"/>
+          <!-- Mirrored / reflected text -->
+          <text x="130" y="148" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="600" font-size="32"
+            fill="#111" opacity="0.15" letter-spacing="8"
+            transform="scale(1,-1) translate(0,-268)">SIXTH</text>
+          <text x="130" y="196" text-anchor="middle"
+            font-family="'Cormorant Garamond', serif" font-weight="500" font-size="13"
+            fill="#111" letter-spacing="6" opacity="0.55">ELEMENT</text>
+          <text x="130" y="214" text-anchor="middle"
+            font-family="'DM Mono', monospace" font-weight="300" font-size="5.5"
+            fill="#111" opacity="0.22" letter-spacing="2">COFFEE ROASTERS · NEW YORK</text>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Bold Type + Carbon Logo Renditions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Montserrat:wght@100;200;300;400&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #edeae3;
+      padding: 3rem 2rem;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .section-title {
+      max-width: 1100px;
+      margin: 0 auto 1.5rem;
+      font-weight: 200;
+      font-size: 0.55rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: #aaa;
+      padding-top: 3rem;
+    }
+
+    .section-title:first-child { padding-top: 0; }
+
+    /* =====================
+       SECTION 1: Bold type weights on Option A
+       ===================== */
+    .weight-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .w-card {
+      padding: 3.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      min-height: 300px;
+      position: relative;
+    }
+
+    .w-card.bg-white { background: #fff; }
+    .w-card.bg-dark  { background: #0a0a0a; }
+    .w-card.bg-off   { background: #f7f3ed; }
+    .w-card.bg-mid   { background: #1a1a1a; }
+
+    .w-tag {
+      position: absolute;
+      top: 1rem; left: 1.2rem;
+      font-size: 0.48rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+    .w-card.bg-dark .w-tag,
+    .w-card.bg-mid .w-tag { color: #333; }
+
+    .w-name {
+      position: absolute;
+      bottom: 1rem; right: 1.2rem;
+      font-size: 0.44rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+    .w-card.bg-dark .w-name,
+    .w-card.bg-mid .w-name { color: #333; }
+
+    /* Cormorant weight variants */
+    .cg-300 { font-family: 'Cormorant Garamond', serif; font-weight: 300; }
+    .cg-400 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+    .cg-500 { font-family: 'Cormorant Garamond', serif; font-weight: 500; }
+    .cg-600 { font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+    .cg-700 { font-family: 'Cormorant Garamond', serif; font-weight: 700; }
+    .cg-i400 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-style: italic; }
+    .cg-i500 { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-style: italic; }
+    .cg-i600 { font-family: 'Cormorant Garamond', serif; font-weight: 600; font-style: italic; }
+
+    .main-text {
+      font-size: 1.5rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .sub-text {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.4rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+      text-align: center;
+    }
+
+    .w-card.bg-dark .main-text,
+    .w-card.bg-mid .main-text { color: #f4f0eb; }
+    .w-card.bg-dark .sub-text,
+    .w-card.bg-mid .sub-text { color: #f4f0eb; }
+
+    .lockup { display: flex; flex-direction: column; align-items: center; gap: 1.4rem; }
+
+    /* =====================
+       SECTION 2: Carbon Logo Renditions
+       ===================== */
+    .logo-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .logo-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .l-card {
+      padding: 3.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.8rem;
+      min-height: 300px;
+      position: relative;
+    }
+
+    .l-card.bg-white { background: #fff; }
+    .l-card.bg-dark  { background: #0a0a0a; }
+    .l-card.bg-off   { background: #f7f3ed; }
+    .l-card.bg-mid   { background: #1c1c1c; }
+    .l-card.bg-kraft { background: #c8a96e; }
+
+    .l-tag {
+      position: absolute;
+      top: 1rem; left: 1.2rem;
+      font-size: 0.46rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #ccc;
+    }
+    .l-card.bg-dark .l-tag,
+    .l-card.bg-mid .l-tag { color: #333; }
+    .l-card.bg-kraft .l-tag { color: #a07840; }
+
+    .wm { text-align: center; }
+    .wm-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 1.35rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .wm-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.38rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #0a0a0a;
+      opacity: 0.45;
+      margin-top: 0.55rem;
+    }
+    .l-card.bg-dark .wm-main,
+    .l-card.bg-mid .wm-main { color: #f4f0eb; }
+    .l-card.bg-dark .wm-sub,
+    .l-card.bg-mid .wm-sub { color: #f4f0eb; }
+    .l-card.bg-kraft .wm-main { color: #1a0f00; }
+    .l-card.bg-kraft .wm-sub { color: #1a0f00; }
+
+    /* Story panel */
+    .story-panel {
+      max-width: 1100px;
+      margin: 3px auto 0;
+      background: #0a0a0a;
+      padding: 5rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .story-symbol { display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+
+    .story-element-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.45rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #444;
+      text-align: center;
+    }
+
+    .story-text {}
+
+    .story-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.45rem;
+      letter-spacing: 0.6em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .story-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 2.4rem;
+      color: #f4f0eb;
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+      margin-bottom: 2rem;
+    }
+
+    .story-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.9;
+      color: rgba(244,240,235,0.5);
+      max-width: 560px;
+    }
+
+    .story-body strong {
+      color: rgba(244,240,235,0.85);
+      font-weight: 400;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===========================
+       SECTION 1: BOLD WEIGHT VARIANTS
+       =========================== -->
+  <p class="section-title">01 — Cormorant Garamond · Weight Exploration (Bolder A)</p>
+  <div class="weight-grid">
+
+    <!-- 300 upright (original) -->
+    <div class="w-card bg-white">
+      <span class="w-tag">A1 — Original</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-300">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 300</span>
+    </div>
+
+    <!-- 500 upright -->
+    <div class="w-card bg-dark">
+      <span class="w-tag">A2 — Medium</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-500">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 500</span>
+    </div>
+
+    <!-- 600 upright -->
+    <div class="w-card bg-white">
+      <span class="w-tag">A3 — SemiBold</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1.2" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.6" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.6" opacity="0.4"/><circle cx="36" cy="36" r="2.5" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.8" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.8" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.8" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.8" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.8" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.8" fill="#0a0a0a" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-600">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 600</span>
+    </div>
+
+    <!-- 500 italic — the sweet spot -->
+    <div class="w-card bg-dark">
+      <span class="w-tag">A4 — Medium Italic ★</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-i500">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 500 Italic</span>
+    </div>
+
+    <!-- 600 italic -->
+    <div class="w-card bg-off">
+      <span class="w-tag">A5 — SemiBold Italic</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-i600">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 600 Italic</span>
+    </div>
+
+    <!-- 700 upright — boldest -->
+    <div class="w-card bg-mid">
+      <span class="w-tag">A6 — Bold</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1.5" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.7" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.7" opacity="0.4"/><circle cx="36" cy="36" r="3" fill="#f4f0eb"/><circle cx="36" cy="14" r="2" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="2" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="2" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="2" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="2" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="2" fill="#f4f0eb" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-700">Sixth Element</div>
+          <div class="sub-text">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 700</span>
+    </div>
+
+    <!-- Mixed: 600 upright + tight spacing -->
+    <div class="w-card bg-white">
+      <span class="w-tag">A7 — Tight + Bold</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#0a0a0a" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#0a0a0a" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#0a0a0a"/><circle cx="36" cy="14" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#0a0a0a" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#0a0a0a" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-600" style="letter-spacing:0.2em; font-size:1.7rem">Sixth Element</div>
+          <div class="sub-text" style="letter-spacing:0.5em">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">Weight 600 · Tight Tracking</span>
+    </div>
+
+    <!-- Mixed italic + small caps sub -->
+    <div class="w-card bg-dark">
+      <span class="w-tag">A8 — Contrast Pair ★</span>
+      <div class="lockup">
+        <svg width="50" height="50" viewBox="0 0 72 72" fill="none"><polygon points="36,4 64,20 64,52 36,68 8,52 8,20" stroke="#f4f0eb" stroke-width="1" fill="none"/><polygon points="36,14 56,25 56,47 36,58 16,47 16,25" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/><line x1="36" y1="36" x2="36" y2="14" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="56" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="36" y2="58" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="47" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><line x1="36" y1="36" x2="16" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.4"/><circle cx="36" cy="36" r="2" fill="#f4f0eb"/><circle cx="36" cy="14" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="56" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="36" cy="58" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="47" r="1.5" fill="#f4f0eb" opacity="0.6"/><circle cx="16" cy="25" r="1.5" fill="#f4f0eb" opacity="0.6"/></svg>
+        <div class="lockup">
+          <div class="main-text cg-i600" style="font-size:1.8rem; letter-spacing:0.05em">Sixth Element</div>
+          <div class="sub-text" style="letter-spacing:0.7em; margin-top:0.3rem">Coffee Roasters · New York</div>
+        </div>
+      </div>
+      <span class="w-name">600 Italic + Josefin 100 wide</span>
+    </div>
+
+  </div>
+
+  <!-- ===========================
+       SECTION 2: CARBON LOGO RENDITIONS
+       =========================== -->
+  <p class="section-title">02 — Carbon Symbol Renditions · 9 Variations</p>
+  <div class="logo-grid-3">
+
+    <!-- R1: Classic hexagon (current) -->
+    <div class="l-card bg-white">
+      <span class="l-tag">R1 — Classic Hexagon</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+        <polygon points="40,16 62,28 62,52 40,64 18,52 18,28" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.25"/>
+        <line x1="40" y1="40" x2="40" y2="16" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <line x1="40" y1="40" x2="62" y2="28" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <line x1="40" y1="40" x2="62" y2="52" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <line x1="40" y1="40" x2="40" y2="64" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <line x1="40" y1="40" x2="18" y2="52" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <line x1="40" y1="40" x2="18" y2="28" stroke="#0a0a0a" stroke-width="0.5" opacity="0.35"/>
+        <circle cx="40" cy="40" r="2.5" fill="#0a0a0a"/>
+        <circle cx="40" cy="16" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+        <circle cx="62" cy="28" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+        <circle cx="62" cy="52" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+        <circle cx="40" cy="64" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+        <circle cx="18" cy="52" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+        <circle cx="18" cy="28" r="1.8" fill="#0a0a0a" opacity="0.6"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R2: Filled hexagon outline bold -->
+    <div class="l-card bg-dark">
+      <span class="l-tag">R2 — Bold Outline</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#f4f0eb" stroke-width="2" fill="none"/>
+        <line x1="40" y1="40" x2="40" y2="4" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <line x1="40" y1="40" x2="72" y2="22" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <line x1="40" y1="40" x2="72" y2="58" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <line x1="40" y1="40" x2="40" y2="76" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <line x1="40" y1="40" x2="8" y2="58" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <line x1="40" y1="40" x2="8" y2="22" stroke="#f4f0eb" stroke-width="0.8" opacity="0.3"/>
+        <circle cx="40" cy="40" r="3" fill="#f4f0eb"/>
+        <circle cx="40" cy="4" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="72" cy="22" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="72" cy="58" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="40" cy="76" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="8" cy="58" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="8" cy="22" r="2.5" fill="#f4f0eb" opacity="0.5"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R3: Periodic table style -->
+    <div class="l-card bg-off">
+      <span class="l-tag">R3 — Periodic Table</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Square border like periodic table -->
+        <rect x="6" y="6" width="68" height="68" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+        <rect x="10" y="10" width="60" height="60" stroke="#0a0a0a" stroke-width="0.3" fill="none" opacity="0.2"/>
+        <!-- Atomic number -->
+        <text x="40" y="28" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="9" fill="#0a0a0a" opacity="0.5" letter-spacing="2">6</text>
+        <!-- Element symbol -->
+        <text x="40" y="50" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="500" font-size="26" fill="#0a0a0a">C</text>
+        <!-- Element name -->
+        <text x="40" y="64" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="6" fill="#0a0a0a" opacity="0.45" letter-spacing="2">Carbon</text>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R4: Concentric rings -->
+    <div class="l-card bg-dark">
+      <span class="l-tag">R4 — Atomic Orbits</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Electron shells -->
+        <circle cx="40" cy="40" r="34" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <circle cx="40" cy="40" r="24" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.3"/>
+        <circle cx="40" cy="40" r="14" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.4"/>
+        <!-- Nucleus -->
+        <circle cx="40" cy="40" r="5" fill="#f4f0eb"/>
+        <!-- Electrons on shells -->
+        <circle cx="40" cy="6" r="2" fill="#f4f0eb" opacity="0.6"/>
+        <circle cx="40" cy="74" r="2" fill="#f4f0eb" opacity="0.6"/>
+        <circle cx="6" cy="40" r="2" fill="#f4f0eb" opacity="0.6"/>
+        <circle cx="74" cy="40" r="2" fill="#f4f0eb" opacity="0.6"/>
+        <circle cx="57" cy="23" r="1.5" fill="#f4f0eb" opacity="0.4"/>
+        <circle cx="23" cy="57" r="1.5" fill="#f4f0eb" opacity="0.4"/>
+        <!-- Orbit line accent -->
+        <ellipse cx="40" cy="40" rx="34" ry="12" stroke="#f4f0eb" stroke-width="0.4" fill="none" opacity="0.15" transform="rotate(45 40 40)"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R5: Single hexagon + 6 -->
+    <div class="l-card bg-white">
+      <span class="l-tag">R5 — Numeral in Hex</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+        <!-- 6 inside -->
+        <text x="40" y="52" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-weight="300" font-size="36" fill="#0a0a0a" opacity="0.85">6</text>
+        <!-- Small E -->
+        <text x="40" y="70" text-anchor="middle" font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="6" fill="#0a0a0a" opacity="0.3" letter-spacing="4">ELEMENT</text>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R6: Diamond / rotated hex -->
+    <div class="l-card bg-mid">
+      <span class="l-tag">R6 — Diamond (Carbon)</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Rotated hexagon = diamond form -->
+        <polygon points="40,6 68,24 68,56 40,74 12,56 12,24" stroke="#f4f0eb" stroke-width="1" fill="none" transform="rotate(30 40 40)"/>
+        <!-- Inner structure -->
+        <polygon points="40,6 68,24 68,56 40,74 12,56 12,24" stroke="#f4f0eb" stroke-width="0.4" fill="none" opacity="0.2" transform="rotate(30 40 40) scale(0.6 0.6) translate(16 16)"/>
+        <!-- Connecting lines -->
+        <line x1="40" y1="40" x2="40" y2="10" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <line x1="40" y1="40" x2="65" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <line x1="40" y1="40" x2="65" y2="55" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <line x1="40" y1="40" x2="40" y2="70" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <line x1="40" y1="40" x2="15" y2="55" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <line x1="40" y1="40" x2="15" y2="25" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3" transform="rotate(30 40 40)"/>
+        <circle cx="40" cy="40" r="3" fill="#f4f0eb"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R7: Graphene / honeycomb -->
+    <div class="l-card bg-white">
+      <span class="l-tag">R7 — Graphene Grid</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Honeycomb tile (graphene = carbon sheets) -->
+        <!-- Center hex -->
+        <polygon points="40,26 51,32 51,44 40,50 29,44 29,32" stroke="#0a0a0a" stroke-width="0.8" fill="none"/>
+        <!-- Surrounding hexes partial -->
+        <polygon points="40,6 51,12 51,24 40,30 29,24 29,12" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <polygon points="40,46 51,52 51,64 40,70 29,64 29,52" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <polygon points="18,16 29,22 29,34 18,40 7,34 7,22" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <polygon points="62,16 73,22 73,34 62,40 51,34 51,22" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <polygon points="18,36 29,42 29,54 18,60 7,54 7,42" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.1"/>
+        <polygon points="62,36 73,42 73,54 62,60 51,54 51,42" stroke="#0a0a0a" stroke-width="0.5" fill="none" opacity="0.1"/>
+        <!-- Center dot -->
+        <circle cx="40" cy="38" r="2.5" fill="#0a0a0a"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R8: Minimal cross / molecular -->
+    <div class="l-card bg-dark">
+      <span class="l-tag">R8 — Molecular Node</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Central large circle -->
+        <circle cx="40" cy="40" r="8" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+        <!-- 6 bond arms -->
+        <line x1="40" y1="32" x2="40" y2="10" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <line x1="40" y1="48" x2="40" y2="70" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <line x1="33" y1="36" x2="14" y2="25" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <line x1="47" y1="36" x2="66" y2="25" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <line x1="33" y1="44" x2="14" y2="55" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <line x1="47" y1="44" x2="66" y2="55" stroke="#f4f0eb" stroke-width="1" opacity="0.6"/>
+        <!-- Terminal circles -->
+        <circle cx="40" cy="10" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <circle cx="40" cy="70" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <circle cx="14" cy="25" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <circle cx="66" cy="25" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <circle cx="14" cy="55" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <circle cx="66" cy="55" r="3.5" fill="#f4f0eb" opacity="0.7"/>
+        <!-- Center fill -->
+        <circle cx="40" cy="40" r="4" fill="#f4f0eb"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+    <!-- R9: Roast curve + hexagon hybrid -->
+    <div class="l-card bg-off">
+      <span class="l-tag">R9 — Roast Curve in Hex ★</span>
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+        <!-- Hexagon container -->
+        <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#0a0a0a" stroke-width="1" fill="none"/>
+        <!-- Roast curve path inside hex (rising curve = roast profile) -->
+        <path d="M 16 58 Q 25 55 28 48 Q 32 38 36 32 Q 40 26 46 22 Q 52 18 58 16" stroke="#0a0a0a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <!-- First crack marker -->
+        <circle cx="46" cy="22" r="2" fill="#0a0a0a" opacity="0.5"/>
+        <!-- Axis lines faint -->
+        <line x1="16" y1="62" x2="16" y2="16" stroke="#0a0a0a" stroke-width="0.4" opacity="0.2"/>
+        <line x1="12" y1="58" x2="64" y2="58" stroke="#0a0a0a" stroke-width="0.4" opacity="0.2"/>
+      </svg>
+      <div class="wm"><div class="wm-main">Sixth Element</div><div class="wm-sub">Coffee Roasters · New York</div></div>
+    </div>
+
+  </div>
+
+  <!-- ===========================
+       BRAND STORY PANEL
+       =========================== -->
+  <p class="section-title">03 — Brand Story in Context</p>
+  <div class="story-panel">
+    <div class="story-symbol">
+      <svg width="100" height="100" viewBox="0 0 80 80" fill="none">
+        <polygon points="40,4 72,22 72,58 40,76 8,58 8,22" stroke="#f4f0eb" stroke-width="1" fill="none"/>
+        <polygon points="40,16 62,28 62,52 40,64 18,52 18,28" stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.2"/>
+        <line x1="40" y1="40" x2="40" y2="16" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="40" x2="62" y2="28" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="40" x2="62" y2="52" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="40" x2="40" y2="64" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="40" x2="18" y2="52" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <line x1="40" y1="40" x2="18" y2="28" stroke="#f4f0eb" stroke-width="0.5" opacity="0.3"/>
+        <circle cx="40" cy="40" r="2.5" fill="#f4f0eb"/>
+        <circle cx="40" cy="16" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="62" cy="28" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="62" cy="52" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="40" cy="64" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="18" cy="52" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+        <circle cx="18" cy="28" r="1.8" fill="#f4f0eb" opacity="0.5"/>
+      </svg>
+      <p class="story-element-label">C · 6 · 12.011<br/>Carbon</p>
+    </div>
+    <div class="story-text">
+      <p class="story-eyebrow">The Name · The Story</p>
+      <h2 class="story-headline">Everything begins<br/>with carbon.</h2>
+      <p class="story-body">
+        <strong>Carbon is the sixth element.</strong> The building block of all organic life — every living thing, every flavor compound, every coffee bean is carbon at its core. Without carbon, nothing grows. Nothing tastes. Nothing transforms.
+        <br/><br/>
+        Roasting is a carbon story. The Maillard reaction, caramelization, the development of hundreds of aromatic compounds — all of it happens through the precise application of heat to carbon-based matter. <strong>The line between a perfect roast and a burnt one is the line between controlled carbon transformation and carbonization.</strong>
+        <br/><br/>
+        Even the diamond — the most precious form of carbon — is created through extreme pressure and heat. <strong>So is every exceptional cup.</strong>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

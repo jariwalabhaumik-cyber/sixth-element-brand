@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Logo Concepts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a1814;
+      padding: 5rem 3rem;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .page-title {
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.5rem;
+      letter-spacing: 0.7em;
+      text-transform: uppercase;
+      color: #444;
+      margin-bottom: 5rem;
+    }
+
+    /* ─── CONCEPT HEADER ─── */
+    .concept-header {
+      max-width: 1200px;
+      margin: 0 auto 2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid #2a2620;
+    }
+
+    .concept-number {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.45rem;
+      letter-spacing: 0.3em;
+      color: #3a3630;
+    }
+
+    .concept-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: #6a6460;
+      letter-spacing: 0.05em;
+    }
+
+    .concept-desc {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.4rem;
+      letter-spacing: 0.4em;
+      color: #2e2c28;
+      text-transform: uppercase;
+      margin-left: auto;
+    }
+
+    /* ─── GRID ─── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3px;
+      max-width: 1200px;
+      margin: 0 auto 6rem;
+    }
+
+    .card {
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 0;
+    }
+
+    .card.dark  { background: #0d0d0b; }
+    .card.light { background: #f0ece4; }
+    .card.mid   { background: #1c1a16; }
+    .card.warm  { background: #f7f3ec; }
+    .card.ink   { background: #111008; }
+    .card.paper { background: #ede9e0; }
+    .card.slate { background: #1e1e1e; }
+    .card.bone  { background: #faf7f2; }
+
+    .card-tag {
+      position: absolute;
+      top: 1rem;
+      left: 1.2rem;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.38rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+    }
+
+    .dark .card-tag, .mid .card-tag, .ink .card-tag, .slate .card-tag { color: #2a2820; }
+    .light .card-tag, .warm .card-tag, .paper .card-tag, .bone .card-tag { color: #ccc8c0; }
+
+    /* ─── SECTION SPACER ─── */
+    .section-gap { height: 2rem; max-width: 1200px; margin: 0 auto; }
+
+  </style>
+</head>
+<body>
+
+  <p class="page-title">Sixth Element Coffee Roasters · Logo Explorations · Concepts 01 & 02</p>
+
+  <!-- ════════════════════════════════════════════════
+       CONCEPT 01 — ROAST CURVE
+       ════════════════════════════════════════════════ -->
+
+  <div class="concept-header">
+    <span class="concept-number">01</span>
+    <span class="concept-name">The Roast Curve</span>
+    <span class="concept-desc">Temperature over time · Your actual development profile as identity</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- R1A — Curve only, dark, minimal hairline -->
+    <div class="card dark">
+      <span class="card-tag">R1-A</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <defs>
+          <linearGradient id="curve1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f0ece4" stop-opacity="0.3"/>
+            <stop offset="60%" stop-color="#f0ece4" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#f0ece4" stop-opacity="0.6"/>
+          </linearGradient>
+        </defs>
+        <!-- Roast curve: slow early climb, rapid drying, first crack surge, development plateau -->
+        <path d="M 20,148 C 35,145 45,138 58,118 C 68,102 72,88 80,72 C 88,56 95,44 105,36 C 115,28 125,26 140,27 C 148,27.5 155,28 160,29"
+          fill="none" stroke="url(#curve1)" stroke-width="1.2" stroke-linecap="round"/>
+        <!-- First crack marker -->
+        <circle cx="105" cy="36" r="2.5" fill="none" stroke="#f0ece4" stroke-width="0.7" opacity="0.5"/>
+        <!-- Axis lines -->
+        <line x1="20" y1="148" x2="20" y2="24" stroke="#f0ece4" stroke-width="0.4" opacity="0.15"/>
+        <line x1="20" y1="148" x2="162" y2="148" stroke="#f0ece4" stroke-width="0.4" opacity="0.15"/>
+        <!-- Wordmark below -->
+        <text x="90" y="170" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="11"
+          fill="#f0ece4" letter-spacing="4" opacity="0.85">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- R1-B — Curve + wordmark stacked, cream bg -->
+    <div class="card light">
+      <span class="card-tag">R1-B</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <defs>
+          <linearGradient id="curve2" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#111" stop-opacity="0.2"/>
+            <stop offset="55%" stop-color="#111" stop-opacity="0.85"/>
+            <stop offset="100%" stop-color="#111" stop-opacity="0.5"/>
+          </linearGradient>
+        </defs>
+        <path d="M 20,148 C 35,145 45,138 58,118 C 68,102 72,88 80,72 C 88,56 95,44 105,36 C 115,28 125,26 140,27 C 148,27.5 155,28 160,29"
+          fill="none" stroke="url(#curve2)" stroke-width="1.5" stroke-linecap="round"/>
+        <circle cx="105" cy="36" r="2.5" fill="none" stroke="#111" stroke-width="0.8" opacity="0.4"/>
+        <line x1="20" y1="148" x2="20" y2="24" stroke="#111" stroke-width="0.4" opacity="0.1"/>
+        <line x1="20" y1="148" x2="162" y2="148" stroke="#111" stroke-width="0.4" opacity="0.1"/>
+        <!-- FC label -->
+        <text x="108" y="32" font-family="'DM Mono', monospace" font-size="5" fill="#111" opacity="0.3" letter-spacing="1">FC</text>
+        <text x="90" y="170" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="11"
+          fill="#111" letter-spacing="4" opacity="0.85">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- R1-C — Curve bolder, no axes, mark only -->
+    <div class="card mid">
+      <span class="card-tag">R1-C</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Just the curve, heavier, centered -->
+        <path d="M 15,135 C 32,130 44,120 58,100 C 70,82 74,68 84,52 C 94,36 104,26 118,22 C 130,18 142,20 160,22"
+          fill="none" stroke="#f0ece4" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+        <!-- Development plateau tick -->
+        <line x1="118" y1="14" x2="118" y2="30" stroke="#f0ece4" stroke-width="0.8" opacity="0.35"/>
+        <!-- Temp labels mono -->
+        <text x="15" y="165" font-family="'DM Mono', monospace" font-size="6" fill="#f0ece4" opacity="0.25" letter-spacing="1">160°C</text>
+        <text x="88" y="165" font-family="'DM Mono', monospace" font-size="6" fill="#f0ece4" opacity="0.25" letter-spacing="1">→ 215°C</text>
+      </svg>
+    </div>
+
+    <!-- R1-D — Full lockup dark, curve above stacked wordmark -->
+    <div class="card ink">
+      <span class="card-tag">R1-D</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <defs>
+          <linearGradient id="curve4" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f0ece4" stop-opacity="0.15"/>
+            <stop offset="50%" stop-color="#f0ece4" stop-opacity="1"/>
+            <stop offset="100%" stop-color="#f0ece4" stop-opacity="0.7"/>
+          </linearGradient>
+        </defs>
+        <!-- Top rule -->
+        <line x1="28" y1="22" x2="152" y2="22" stroke="#f0ece4" stroke-width="0.6" opacity="0.3"/>
+        <!-- Curve -->
+        <path d="M 28,88 C 42,85 52,76 64,62 C 74,50 78,40 86,32 C 94,24 102,20 112,19 C 120,18 130,19 152,20"
+          fill="none" stroke="url(#curve4)" stroke-width="1.3" stroke-linecap="round"/>
+        <!-- FC dot -->
+        <circle cx="112" cy="19" r="2" fill="#f0ece4" opacity="0.6"/>
+        <!-- Bottom rule -->
+        <line x1="28" y1="95" x2="152" y2="95" stroke="#f0ece4" stroke-width="0.6" opacity="0.3"/>
+        <!-- SIXTH -->
+        <text x="90" y="118" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="22"
+          fill="#f0ece4" letter-spacing="8">SIXTH</text>
+        <!-- ELEMENT -->
+        <text x="90" y="140" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="22"
+          fill="#f0ece4" letter-spacing="8">ELEMENT</text>
+        <!-- Bottom rule -->
+        <line x1="28" y1="150" x2="152" y2="150" stroke="#f0ece4" stroke-width="0.6" opacity="0.3"/>
+        <!-- subline -->
+        <text x="90" y="163" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5"
+          fill="#f0ece4" opacity="0.25" letter-spacing="3">COFFEE ROASTERS</text>
+      </svg>
+    </div>
+
+    <!-- R1-E — Curve as initial letter substitute, cream -->
+    <div class="card paper">
+      <span class="card-tag">R1-E</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Curve stands in place of a letter — large, expressive -->
+        <path d="M 30,155 C 50,148 62,132 74,110 C 84,92 88,76 96,58 C 104,40 114,28 128,22 C 140,17 152,18 168,19"
+          fill="none" stroke="#111" stroke-width="2.2" stroke-linecap="round" opacity="0.85"/>
+        <!-- ixth Element beside it -->
+        <text x="33" y="100" font-family="'Cormorant Garamond', serif" font-weight="300"
+          font-size="13" fill="#111" opacity="0.5" letter-spacing="2">IXTH</text>
+        <text x="33" y="118" font-family="'Cormorant Garamond', serif" font-weight="300"
+          font-size="13" fill="#111" opacity="0.5" letter-spacing="2">ELEMENT</text>
+        <text x="30" y="170" font-family="'DM Mono', monospace" font-size="5"
+          fill="#111" opacity="0.25" letter-spacing="2">DTR 23.2% · 215°C</text>
+      </svg>
+    </div>
+
+    <!-- R1-F — Circular roast curve badge -->
+    <div class="card dark">
+      <span class="card-tag">R1-F</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Outer circle -->
+        <circle cx="90" cy="90" r="72" fill="none" stroke="#f0ece4" stroke-width="0.6" opacity="0.2"/>
+        <!-- Roast curve plotted in polar-ish space, as an arc within circle -->
+        <path d="M 30,130 C 42,118 52,102 62,84 C 70,70 76,56 86,46 C 96,36 108,32 122,32 C 132,32 140,34 150,37"
+          fill="none" stroke="#f0ece4" stroke-width="1.4" stroke-linecap="round" opacity="0.85"/>
+        <!-- FC dot -->
+        <circle cx="122" cy="32" r="2.5" fill="#f0ece4" opacity="0.5"/>
+        <!-- Wordmark inside circle -->
+        <text x="90" y="158" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="9"
+          fill="#f0ece4" letter-spacing="3" opacity="0.7">SIXTH ELEMENT</text>
+        <text x="90" y="170" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="4.5"
+          fill="#f0ece4" letter-spacing="3" opacity="0.3">COFFEE ROASTERS</text>
+      </svg>
+    </div>
+
+    <!-- R1-G — Curve with RoR bump, very technical -->
+    <div class="card bone">
+      <span class="card-tag">R1-G · Technical</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- BT curve main -->
+        <path d="M 18,150 C 32,147 44,138 56,118 C 66,102 70,88 78,72 C 86,56 94,44 104,36 C 114,28 124,26 138,26 C 146,26 152,27 160,28"
+          fill="none" stroke="#111" stroke-width="1.4" stroke-linecap="round" opacity="0.8"/>
+        <!-- RoR curve (rate of rise) - a second thinner line -->
+        <path d="M 18,80 C 30,60 44,45 58,38 C 68,33 76,33 86,38 C 96,43 100,50 110,60 C 118,68 130,75 145,80 C 152,83 157,84 162,85"
+          fill="none" stroke="#111" stroke-width="0.7" stroke-linecap="round" opacity="0.25" stroke-dasharray="3,3"/>
+        <!-- Grid -->
+        <line x1="18" y1="150" x2="18" y2="18" stroke="#111" stroke-width="0.3" opacity="0.1"/>
+        <line x1="18" y1="150" x2="162" y2="150" stroke="#111" stroke-width="0.3" opacity="0.1"/>
+        <!-- Gridlines -->
+        <line x1="18" y1="100" x2="162" y2="100" stroke="#111" stroke-width="0.3" opacity="0.06" stroke-dasharray="2,4"/>
+        <line x1="18" y1="60" x2="162" y2="60" stroke="#111" stroke-width="0.3" opacity="0.06" stroke-dasharray="2,4"/>
+        <!-- Labels -->
+        <text x="10" y="153" font-family="'DM Mono', monospace" font-size="4.5" fill="#111" opacity="0.25">0</text>
+        <text x="10" y="103" font-family="'DM Mono', monospace" font-size="4.5" fill="#111" opacity="0.25">T</text>
+        <text x="90" y="170" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="10"
+          fill="#111" letter-spacing="4" opacity="0.7">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- R1-H — Just the curve, enormous, cropped -->
+    <div class="card slate">
+      <span class="card-tag">R1-H · Cropped</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Curve blown up, bleeds off edges — mark as texture -->
+        <path d="M -10,200 C 20,185 40,160 65,125 C 85,98 90,78 102,55 C 114,32 126,16 148,8 C 162,3 175,4 195,5"
+          fill="none" stroke="#f0ece4" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+        <!-- FC point visible -->
+        <circle cx="148" cy="8" r="4" fill="none" stroke="#f0ece4" stroke-width="1" opacity="0.5"/>
+        <!-- Brand name, bottom aligned -->
+        <text x="16" y="165" font-family="'Cormorant Garamond', serif" font-weight="600"
+          font-size="14" fill="#f0ece4" letter-spacing="5" opacity="0.9">SIXTH</text>
+        <text x="16" y="178" font-family="'Cormorant Garamond', serif" font-weight="600"
+          font-size="14" fill="#f0ece4" letter-spacing="5" opacity="0.9">ELEMENT</text>
+      </svg>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════
+       CONCEPT 02 — STACKED RATIO  6/C
+       ════════════════════════════════════════════════ -->
+
+  <div class="concept-header">
+    <span class="concept-number">02</span>
+    <span class="concept-name">Stacked Ratio</span>
+    <span class="concept-desc">Atomic number over symbol · 6 over C · Carbon as identity</span>
+  </div>
+
+  <div class="grid">
+
+    <!-- S2-A — Classic fraction, dark -->
+    <div class="card dark">
+      <span class="card-tag">S2-A</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- 6 over C, hairline rule between -->
+        <text x="90" y="72" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-size="52"
+          fill="#f0ece4" letter-spacing="-1" opacity="0.9">6</text>
+        <line x1="52" y1="84" x2="128" y2="84" stroke="#f0ece4" stroke-width="0.8" opacity="0.5"/>
+        <text x="90" y="128" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="52"
+          fill="#f0ece4" letter-spacing="-1" opacity="0.9">C</text>
+        <!-- Brand name tiny -->
+        <text x="90" y="158" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5"
+          fill="#f0ece4" letter-spacing="4" opacity="0.3">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- S2-B — Periodic tile format, cream -->
+    <div class="card light">
+      <span class="card-tag">S2-B · Periodic</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Periodic table tile border -->
+        <rect x="42" y="28" width="96" height="110" fill="none" stroke="#111" stroke-width="1" opacity="0.7"/>
+        <!-- Atomic number top left -->
+        <text x="50" y="46"
+          font-family="'DM Mono', monospace" font-weight="300" font-size="10"
+          fill="#111" opacity="0.5">6</text>
+        <!-- Symbol large, centered -->
+        <text x="90" y="105" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="64"
+          fill="#111" opacity="0.85">C</text>
+        <!-- Element name bottom center -->
+        <text x="90" y="124" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="300" font-size="6.5"
+          fill="#111" opacity="0.4" letter-spacing="2">Carbon</text>
+        <!-- Brand name below tile -->
+        <text x="90" y="158" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="10"
+          fill="#111" letter-spacing="4" opacity="0.7">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- S2-C — Bold mono treatment, dark -->
+    <div class="card mid">
+      <span class="card-tag">S2-C · Mono</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <text x="90" y="80" text-anchor="middle"
+          font-family="'DM Mono', monospace" font-weight="400" font-size="58"
+          fill="#f0ece4" opacity="0.9">06</text>
+        <line x1="30" y1="92" x2="150" y2="92" stroke="#f0ece4" stroke-width="0.6" opacity="0.3"/>
+        <text x="90" y="115" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+          fill="#f0ece4" letter-spacing="8" opacity="0.85">SIXTH</text>
+        <text x="90" y="133" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="14"
+          fill="#f0ece4" letter-spacing="8" opacity="0.85">ELEMENT</text>
+        <text x="90" y="158" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5"
+          fill="#f0ece4" opacity="0.2" letter-spacing="3">COFFEE ROASTERS · NEW YORK</text>
+      </svg>
+    </div>
+
+    <!-- S2-D — Large 6 with C overlaid, ghosted -->
+    <div class="card bone">
+      <span class="card-tag">S2-D · Overlap</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Ghost C behind -->
+        <text x="90" y="118" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="130"
+          fill="#111" opacity="0.06">C</text>
+        <!-- 6 foreground -->
+        <text x="90" y="108" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="80"
+          fill="#111" opacity="0.82">6</text>
+        <!-- Brand name -->
+        <text x="90" y="158" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="10"
+          fill="#111" letter-spacing="4" opacity="0.6">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- S2-E — Serif 6/C stacked, warm bg, minimal -->
+    <div class="card warm">
+      <span class="card-tag">S2-E · Pure</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <text x="90" y="88" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="600" font-size="68"
+          fill="#111" opacity="0.88">6</text>
+        <line x1="58" y1="98" x2="122" y2="98" stroke="#111" stroke-width="1" opacity="0.35"/>
+        <text x="90" y="146" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="68"
+          fill="#111" opacity="0.88">C</text>
+      </svg>
+    </div>
+
+    <!-- S2-F — Tile with full brand name inside, dark -->
+    <div class="card ink">
+      <span class="card-tag">S2-F · Tile</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <rect x="28" y="18" width="124" height="140" fill="none" stroke="#f0ece4" stroke-width="0.7" opacity="0.35"/>
+        <!-- Inner padding lines -->
+        <line x1="28" y1="48" x2="152" y2="48" stroke="#f0ece4" stroke-width="0.4" opacity="0.15"/>
+        <line x1="28" y1="140" x2="152" y2="140" stroke="#f0ece4" stroke-width="0.4" opacity="0.15"/>
+        <!-- 6 top left -->
+        <text x="38" y="44"
+          font-family="'DM Mono', monospace" font-weight="300" font-size="18"
+          fill="#f0ece4" opacity="0.5">6</text>
+        <!-- C large center -->
+        <text x="90" y="115" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="80"
+          fill="#f0ece4" opacity="0.82">C</text>
+        <!-- SE bottom -->
+        <text x="90" y="155" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5.5"
+          fill="#f0ece4" opacity="0.3" letter-spacing="4">SIXTH ELEMENT</text>
+      </svg>
+    </div>
+
+    <!-- S2-G — Just "C6" side by side, editorial -->
+    <div class="card paper">
+      <span class="card-tag">S2-G · C6</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <text x="42" y="122" text-anchor="start"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="90"
+          fill="#111" opacity="0.85">C</text>
+        <text x="112" y="80" text-anchor="start"
+          font-family="'DM Mono', monospace" font-weight="300" font-size="32"
+          fill="#111" opacity="0.4">6</text>
+        <line x1="28" y1="132" x2="152" y2="132" stroke="#111" stroke-width="0.6" opacity="0.2"/>
+        <text x="90" y="148" text-anchor="middle"
+          font-family="'Josefin Sans', sans-serif" font-weight="100" font-size="5"
+          fill="#111" letter-spacing="4" opacity="0.4">SIXTH ELEMENT COFFEE</text>
+      </svg>
+    </div>
+
+    <!-- S2-H — Square stamp, bold -->
+    <div class="card slate">
+      <span class="card-tag">S2-H · Stamp</span>
+      <svg width="180" height="180" viewBox="0 0 180 180">
+        <!-- Double border stamp -->
+        <rect x="22" y="22" width="136" height="136" fill="none" stroke="#f0ece4" stroke-width="1.5" opacity="0.6"/>
+        <rect x="28" y="28" width="124" height="124" fill="none" stroke="#f0ece4" stroke-width="0.4" opacity="0.2"/>
+        <!-- 6 over C, centered in stamp -->
+        <text x="90" y="88" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="500" font-size="44"
+          fill="#f0ece4" opacity="0.9">6</text>
+        <line x1="52" y1="97" x2="128" y2="97" stroke="#f0ece4" stroke-width="0.9" opacity="0.45"/>
+        <text x="90" y="136" text-anchor="middle"
+          font-family="'Cormorant Garamond', serif" font-weight="300" font-style="italic" font-size="44"
+          fill="#f0ece4" opacity="0.9">C</text>
+      </svg>
+    </div>
+
+  </div>
+
+</body>
+</html>

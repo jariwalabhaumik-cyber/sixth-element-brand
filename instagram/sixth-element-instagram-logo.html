@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element — Instagram Logo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Josefin+Sans:wght@100;200&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #d6d1cb;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      gap: 4rem;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    .logo-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.42rem;
+      letter-spacing: 0.55em;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .note {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: 0.38rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: #bbb;
+      text-align: center;
+      max-width: 500px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ROW 1: Two main colorways -->
+  <div class="row">
+
+    <!-- DARK — Black background -->
+    <div class="logo-col">
+      <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Josefin+Sans:wght@100;200&display=swap" rel="stylesheet"/>
+        </defs>
+
+        <!-- Background -->
+        <rect width="400" height="400" fill="#0d0d0d"/>
+
+        <!-- HEX MARK — centered at 200,155, radius scaled up -->
+        <g transform="translate(200,140)">
+          <!-- outer hex -->
+          <polygon points="0,-58 50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29"
+            stroke="#f4f0eb" stroke-width="1.8" fill="none"/>
+          <!-- inner hex subtle -->
+          <polygon points="0,-40 34.6,-20 34.6,20 0,40 -34.6,20 -34.6,-20"
+            stroke="#f4f0eb" stroke-width="0.5" fill="none" opacity="0.12"/>
+          <!-- spokes -->
+          <line x1="0" y1="0" x2="0"    y2="-42" stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="36"   y2="-21" stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="36"   y2="21"  stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="0"    y2="42"  stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-36"  y2="21"  stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-36"  y2="-21" stroke="#f4f0eb" stroke-width="0.9" opacity="0.38"/>
+          <!-- center dot -->
+          <circle cx="0" cy="0" r="5.5" fill="#f4f0eb"/>
+          <!-- vertex dots -->
+          <circle cx="0"    cy="-42" r="3.5" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="36"   cy="-21" r="3.5" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="36"   cy="21"  r="3.5" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="0"    cy="42"  r="3.5" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="-36"  cy="21"  r="3.5" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="-36"  cy="-21" r="3.5" fill="#f4f0eb" opacity="0.55"/>
+        </g>
+
+        <!-- SIXTH -->
+        <text x="200" y="262"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-weight="600"
+          font-size="48"
+          fill="#f4f0eb"
+          letter-spacing="14">SIXTH</text>
+
+        <!-- ELEMENT -->
+        <text x="200" y="308"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-weight="600"
+          font-size="48"
+          fill="#f4f0eb"
+          letter-spacing="14">ELEMENT</text>
+
+      </svg>
+      <p class="label">Dark · For light backgrounds</p>
+    </div>
+
+    <!-- LIGHT — Cream background -->
+    <div class="logo-col">
+      <svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Background -->
+        <rect width="400" height="400" fill="#f4f0eb"/>
+
+        <!-- HEX MARK -->
+        <g transform="translate(200,140)">
+          <polygon points="0,-58 50.2,-29 50.2,29 0,58 -50.2,29 -50.2,-29"
+            stroke="#111" stroke-width="1.8" fill="none"/>
+          <polygon points="0,-40 34.6,-20 34.6,20 0,40 -34.6,20 -34.6,-20"
+            stroke="#111" stroke-width="0.5" fill="none" opacity="0.12"/>
+          <line x1="0" y1="0" x2="0"    y2="-42" stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="36"   y2="-21" stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="36"   y2="21"  stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="0"    y2="42"  stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-36"  y2="21"  stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-36"  y2="-21" stroke="#111" stroke-width="0.9" opacity="0.38"/>
+          <circle cx="0" cy="0" r="5.5" fill="#111"/>
+          <circle cx="0"    cy="-42" r="3.5" fill="#111" opacity="0.55"/>
+          <circle cx="36"   cy="-21" r="3.5" fill="#111" opacity="0.55"/>
+          <circle cx="36"   cy="21"  r="3.5" fill="#111" opacity="0.55"/>
+          <circle cx="0"    cy="42"  r="3.5" fill="#111" opacity="0.55"/>
+          <circle cx="-36"  cy="21"  r="3.5" fill="#111" opacity="0.55"/>
+          <circle cx="-36"  cy="-21" r="3.5" fill="#111" opacity="0.55"/>
+        </g>
+
+        <!-- SIXTH -->
+        <text x="200" y="262"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-weight="600"
+          font-size="48"
+          fill="#111"
+          letter-spacing="14">SIXTH</text>
+
+        <!-- ELEMENT -->
+        <text x="200" y="308"
+          text-anchor="middle"
+          font-family="'Cormorant Garamond', serif"
+          font-weight="600"
+          font-size="48"
+          fill="#111"
+          letter-spacing="14">ELEMENT</text>
+
+      </svg>
+      <p class="label">Light · For dark backgrounds</p>
+    </div>
+
+  </div>
+
+  <!-- ROW 2: Mark-only versions (for profile pic circle crop) -->
+  <div class="row">
+
+    <!-- Mark only dark -->
+    <div class="logo-col">
+      <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" fill="#0d0d0d"/>
+        <g transform="translate(100,100)">
+          <polygon points="0,-68 58.9,-34 58.9,34 0,68 -58.9,34 -58.9,-34"
+            stroke="#f4f0eb" stroke-width="2" fill="none"/>
+          <polygon points="0,-47 40.7,-23.5 40.7,23.5 0,47 -40.7,23.5 -40.7,-23.5"
+            stroke="#f4f0eb" stroke-width="0.6" fill="none" opacity="0.12"/>
+          <line x1="0" y1="0" x2="0"    y2="-50" stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="43"   y2="-25" stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="43"   y2="25"  stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="0"    y2="50"  stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-43"  y2="25"  stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-43"  y2="-25" stroke="#f4f0eb" stroke-width="1.1" opacity="0.38"/>
+          <circle cx="0" cy="0" r="6.5" fill="#f4f0eb"/>
+          <circle cx="0"    cy="-50" r="4" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="43"   cy="-25" r="4" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="43"   cy="25"  r="4" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="0"    cy="50"  r="4" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="-43"  cy="25"  r="4" fill="#f4f0eb" opacity="0.55"/>
+          <circle cx="-43"  cy="-25" r="4" fill="#f4f0eb" opacity="0.55"/>
+        </g>
+      </svg>
+      <p class="label">Mark only · Dark</p>
+    </div>
+
+    <!-- Mark only light -->
+    <div class="logo-col">
+      <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" fill="#f4f0eb"/>
+        <g transform="translate(100,100)">
+          <polygon points="0,-68 58.9,-34 58.9,34 0,68 -58.9,34 -58.9,-34"
+            stroke="#111" stroke-width="2" fill="none"/>
+          <polygon points="0,-47 40.7,-23.5 40.7,23.5 0,47 -40.7,23.5 -40.7,-23.5"
+            stroke="#111" stroke-width="0.6" fill="none" opacity="0.12"/>
+          <line x1="0" y1="0" x2="0"    y2="-50" stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="43"   y2="-25" stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="43"   y2="25"  stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="0"    y2="50"  stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-43"  y2="25"  stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <line x1="0" y1="0" x2="-43"  y2="-25" stroke="#111" stroke-width="1.1" opacity="0.38"/>
+          <circle cx="0" cy="0" r="6.5" fill="#111"/>
+          <circle cx="0"    cy="-50" r="4" fill="#111" opacity="0.55"/>
+          <circle cx="43"   cy="-25" r="4" fill="#111" opacity="0.55"/>
+          <circle cx="43"   cy="25"  r="4" fill="#111" opacity="0.55"/>
+          <circle cx="0"    cy="50"  r="4" fill="#111" opacity="0.55"/>
+          <circle cx="-43"  cy="25"  r="4" fill="#111" opacity="0.55"/>
+          <circle cx="-43"  cy="-25" r="4" fill="#111" opacity="0.55"/>
+        </g>
+      </svg>
+      <p class="label">Mark only · Light</p>
+    </div>
+
+  </div>
+
+  <p class="note">Instagram profile picture is cropped to a circle · Use mark-only versions for profile pic · Use full lockup for highlights covers and feed posts</p>
+
+</body>
+</html>
