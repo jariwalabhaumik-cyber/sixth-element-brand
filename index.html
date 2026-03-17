@@ -553,39 +553,45 @@
     @media (max-width: 680px) {
       nav { padding: 1.1rem 1.5rem; }
       .nav-wordmark .nw-bot { display: none; }
-      .nav-wordmark .nw-top { font-size: 0.6rem; }
-      .nav-cta { font-size: 0.44rem; padding: 0.5rem 1rem; }
+      .nav-wordmark .nw-top { font-size: 0.65rem; letter-spacing: 0.28em; }
+      .nav-cta { font-size: 0.48rem; padding: 0.55rem 1rem; letter-spacing: 0.22em; color: var(--ink); border-color: rgba(17,17,17,0.5); }
 
       .hero { padding: 8rem 1.8rem 5rem; }
-      .hero-title { letter-spacing: 0.3em; }
-      .hero-sub { letter-spacing: 0.3em; }
+      .hero-eyebrow { font-size: 0.52rem; letter-spacing: 0.3em; color: var(--ink); }
+      .hero-title { letter-spacing: 0.25em; }
+      .hero-sub { letter-spacing: 0.25em; font-size: 1rem; color: var(--ink3); }
 
       .definition { padding: 4rem 1.8rem; }
       .def-title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
 
       .firstcrack { padding: 4rem 1.8rem; }
+      .fc-label { font-size: 0.48rem; letter-spacing: 0.25em; color: var(--ink2); }
       .fc-title { font-size: clamp(1.8rem, 7vw, 3rem); }
       .fc-body { font-size: 0.95rem; }
+      .fc-status { font-size: 0.54rem; color: var(--ink); }
 
       .fc-progress {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
-        max-width: 280px;
+        grid-template-columns: 1fr auto;
+        gap: 0.9rem 1.5rem;
+        max-width: 300px;
         margin: 0 auto;
         text-align: left;
       }
       .fc-connector { display: none; }
-      .fc-step { align-items: flex-start; padding: 0; flex-direction: row; justify-content: space-between; gap: 1rem; }
-      .fc-step-label { font-size: 0.4rem; }
-      .fc-step-status { font-size: 0.48rem; }
+      .fc-step { align-items: flex-start; padding: 0; flex-direction: contents; display: contents; }
+      .fc-step-label { font-size: 0.44rem; color: var(--ink2); }
+      .fc-step-status { font-size: 0.5rem; }
 
+      .signup-label { font-size: 0.48rem; letter-spacing: 0.25em; color: var(--ink2); }
       .signup { padding: 4rem 1.8rem; }
       .signup-form { flex-direction: column; border: none; gap: 0.5rem; max-width: 100%; }
-      .signup-form input { border: 1px solid var(--rule); }
-      .signup-form button { border: 1px solid var(--ink); }
+      .signup-form input { border: 1px solid var(--rule); font-size: 0.9rem; }
+      .signup-form button { border: 1px solid var(--ink); font-size: 0.52rem; padding: 1rem; }
 
-      footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 1.5rem; }
+      footer { flex-direction: column; gap: 0.6rem; text-align: center; padding: 1.8rem 1.5rem; }
+      .foot-brand { font-size: 0.48rem; letter-spacing: 0.25em; color: var(--ink2); }
+      .foot-ig { font-size: 0.48rem; color: var(--ink2); }
     }
   </style>
 </head>
