@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sixth Element Coffee Roasters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --linen:  #e2ddd7;
+      --paper:  #f4f0eb;
+      --paper2: #ece8e2;
+      --ink:    #111111;
+      --ink2:   #333333;
+      --ink3:   #555555;
+      --ink4:   #888888;
+      --ink5:   #aaaaaa;
+      --ink6:   #cccccc;
+      --rule:   rgba(17,17,17,0.15);
+      --rule2:  rgba(17,17,17,0.08);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--linen);
+      color: var(--ink);
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 3.5rem;
+      background: rgba(226,221,215,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--rule2);
+    }
+
+    .nav-left { display: flex; align-items: center; gap: 1.1rem; }
+    .nav-mark svg { width: 40px; height: 40px; }
+
+    .nav-wordmark { display: flex; flex-direction: column; gap: 3px; }
+
+    .nav-wordmark .nw-top {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.38em;
+      color: var(--ink);
+    }
+
+    .nav-wordmark .nw-bot {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.44rem;
+      letter-spacing: 0.2em;
+      color: var(--ink3);
+    }
+
+    .nav-ig {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.44rem;
+      letter-spacing: 0.18em;
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-ig:hover { color: var(--ink); }
+
+    .nav-cta {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.52rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid rgba(17,17,17,0.35);
+      padding: 0.6rem 1.6rem;
+      text-decoration: none;
+      transition: all 0.25s;
+    }
+
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10rem 3.5rem 7rem;
+      position: relative;
+      border-bottom: 1px solid var(--rule2);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(17,17,17,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.5rem;
+      letter-spacing: 0.5em;
+      text-transform: uppercase;
+      color: var(--ink2);
+      margin-bottom: 2.8rem;
+      opacity: 0;
+      animation: fup 0.8s ease 0.2s forwards;
+    }
+
+    .hero-mark-wrap {
+      margin-bottom: 2.2rem;
+      opacity: 0;
+      animation: fup 0.8s ease 0.35s forwards;
+    }
+
+    .hero-rule-top {
+      width: 5rem; height: 1px;
+      background: var(--rule);
+      margin-bottom: 1.8rem;
+      opacity: 0;
+      animation: fup 0.8s ease 0.45s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: clamp(2.2rem, 7vw, 5.8rem);
+      letter-spacing: 0.55em;
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+      opacity: 0;
+      animation: fup 1s ease 0.5s forwards;
+    }
+
+    .hero-sub {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 100;
+      font-size: clamp(0.9rem, 2.4vw, 1.6rem);
+      letter-spacing: 0.55em;
+      color: var(--ink4);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fup 1s ease 0.6s forwards;
+    }
+
+    .hero-rule-mid {
+      width: 3rem; height: 1px;
+      background: var(--rule2);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fup 0.8s ease 0.7s forwards;
+    }
+
+    .hero-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink3);
+      opacity: 0;
+      animation: fup 0.9s ease 0.85s forwards;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-actions {
+      opacity: 0;
+      animation: fup 0.9s ease 1.05s forwards;
+    }
+
+    .btn {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.48rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.75rem 2rem;
+      border: 1px solid var(--rule);
+      color: var(--ink);
+      background: transparent;
+      transition: all 0.25s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .btn-fill {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .btn-fill:hover { background: var(--ink2); border-color: var(--ink2); }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fup 0.8s ease 1.3s forwards;
+    }
+
+    .hero-scroll span {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.34rem;
+      letter-spacing: 0.3em;
+      color: var(--ink6);
+      text-transform: uppercase;
+    }
+
+    .scroll-tick {
+      width: 1px; height: 32px;
+      background: linear-gradient(to bottom, var(--ink4), transparent);
+      animation: tickPulse 2s ease-in-out infinite;
+    }
+
+    /* ── DEFINITION ── */
+    .definition {
+      padding: 7rem 3.5rem;
+      border-bottom: 1px solid var(--rule2);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .def-word {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.5rem;
+      letter-spacing: 0.22em;
+      color: var(--ink4);
+      margin-bottom: 1rem;
+    }
+
+    .def-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: 0.02em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.4rem;
+    }
+
+    .def-title em {
+      font-style: italic;
+      color: var(--ink3);
+    }
+
+    .def-rule {
+      width: 2.5rem; height: 1px;
+      background: var(--rule);
+      margin-bottom: 1.4rem;
+    }
+
+    .def-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--ink3);
+    }
+
+    /* ── FIRST CRACK ── */
+    .firstcrack {
+      padding: 7rem 3.5rem;
+      border-bottom: 1px solid var(--rule2);
+      text-align: center;
+    }
+
+    .fc-label {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.42rem;
+      letter-spacing: 0.3em;
+      color: var(--ink5);
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+    }
+
+    .fc-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+
+    .fc-title em {
+      font-style: italic;
+      color: var(--ink2);
+    }
+
+    .fc-rule {
+      width: 2.5rem; height: 1px;
+      background: var(--rule2);
+      margin: 1.8rem auto;
+    }
+
+    .fc-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.08rem;
+      line-height: 1.78;
+      color: var(--ink4);
+      max-width: 500px;
+      margin: 0 auto 2.4rem;
+    }
+
+    .fc-status {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.56rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 3rem;
+    }
+
+    /* Progress strip */
+    .fc-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .fc-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .fc-step-label {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.44rem;
+      letter-spacing: 0.2em;
+      color: var(--ink2);
+      text-transform: uppercase;
+    }
+
+    .fc-step-status {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.56rem;
+      letter-spacing: 0.18em;
+    }
+
+    .fc-step-status.done { color: var(--ink); }
+    .fc-step-status.pending { color: var(--ink3); }
+
+    .fc-connector {
+      width: 2.5rem; height: 1px;
+      background: var(--rule2);
+      flex-shrink: 0;
+    }
+
+    /* ── EMAIL SIGNUP ── */
+    .signup {
+      padding: 7rem 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--rule2);
+    }
+
+    .signup-label {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.42rem;
+      letter-spacing: 0.3em;
+      color: var(--ink5);
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    .signup-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: clamp(1.2rem, 3vw, 2.2rem);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 0.6rem;
+    }
+
+    .signup-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 0.98rem;
+      color: var(--ink4);
+      margin-bottom: 2.8rem;
+    }
+
+    .signup-form {
+      display: flex;
+      gap: 0;
+      max-width: 420px;
+      margin: 0 auto 1.8rem;
+      border: 1px solid var(--rule);
+    }
+
+    .signup-form input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      padding: 0.9rem 1.2rem;
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.46rem;
+      letter-spacing: 0.15em;
+      color: var(--ink);
+    }
+
+    .signup-form input::placeholder {
+      color: var(--ink5);
+      letter-spacing: 0.15em;
+    }
+
+    .signup-form button {
+      background: var(--ink);
+      color: var(--paper);
+      border: none;
+      padding: 0.9rem 1.6rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.42rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .signup-form button:hover { background: var(--ink2); }
+
+    .signup-ig {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.42rem;
+      letter-spacing: 0.15em;
+      color: var(--ink4);
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.2s;
+    }
+
+    .signup-ig:hover { color: var(--ink); }
+
+    /* ── FOOTER ── */
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.8rem 3.5rem;
+    }
+
+    .foot-brand {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 200;
+      font-size: 0.52rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--ink2);
+    }
+
+    .foot-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--ink3);
+    }
+
+    .foot-ig {
+      font-family: 'DM Mono', monospace;
+      font-weight: 300;
+      font-size: 0.44rem;
+      letter-spacing: 0.18em;
+      color: var(--ink3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .foot-ig:hover { color: var(--ink); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fup {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes tickPulse {
+      0%, 100% { opacity: 0.25; }
+      50%       { opacity: 0.7; }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.on { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.12s; }
+    .d2 { transition-delay: 0.24s; }
+    .d3 { transition-delay: 0.36s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 680px) {
+      nav { padding: 1.1rem 1.5rem; }
+      .definition { padding: 5rem 1.8rem; }
+      .firstcrack, .signup { padding: 5rem 1.8rem; }
+      .fc-progress { gap: 1rem; }
+      .fc-connector { display: none; }
+      .signup-form { flex-direction: column; border: none; gap: 0.5rem; }
+      .signup-form input { border: 1px solid var(--rule); }
+      .signup-form button { border: 1px solid var(--ink); }
+      footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-left">
+    <div class="nav-mark">
+      <svg viewBox="0 0 40 40" fill="none">
+        <polygon points="20,3.5 34.3,11.75 34.3,28.25 20,36.5 5.7,28.25 5.7,11.75"
+          stroke="#111" stroke-width="1" fill="none"/>
+        <line x1="20" y1="20" x2="20"   y2="3.5"   stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="20" y1="20" x2="34.3" y2="11.75" stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="20" y1="20" x2="34.3" y2="28.25" stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="20" y1="20" x2="20"   y2="36.5"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="20" y1="20" x2="5.7"  y2="28.25" stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="20" y1="20" x2="5.7"  y2="11.75" stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <circle cx="20"   cy="3.5"   r="1.6" fill="#111"/>
+        <circle cx="34.3" cy="11.75" r="1.6" fill="#111"/>
+        <circle cx="34.3" cy="28.25" r="1.6" fill="#111"/>
+        <circle cx="20"   cy="36.5"  r="1.6" fill="#111"/>
+        <circle cx="5.7"  cy="28.25" r="1.6" fill="#111"/>
+        <circle cx="5.7"  cy="11.75" r="1.6" fill="#111"/>
+        <circle cx="20"   cy="20"    r="2.4" fill="#111"/>
+      </svg>
+    </div>
+    <div class="nav-wordmark">
+      <span class="nw-top">SIXTH ELEMENT</span>
+      <span class="nw-bot">COFFEE ROASTERS · JERSEY CITY NJ</span>
+    </div>
+  </div>
+  <a href="https://www.instagram.com/sixthelementcoffee/" target="_blank" class="nav-cta">Follow Us</a>
+</nav>
+
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-inner">
+
+    <p class="hero-eyebrow">Jersey City, NJ · SCA Certified · Coming Soon</p>
+
+    <div class="hero-mark-wrap">
+      <svg width="100" height="100" viewBox="0 0 64 64" fill="none">
+        <polygon points="32,6 54.5,19 54.5,45 32,58 9.5,45 9.5,19"
+          stroke="#111" stroke-width="1" fill="none"/>
+        <line x1="32" y1="32" x2="32"   y2="6"   stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="32" y1="32" x2="54.5" y2="19"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="32" y1="32" x2="54.5" y2="45"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="32" y1="32" x2="32"   y2="58"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="32" y1="32" x2="9.5"  y2="45"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <line x1="32" y1="32" x2="9.5"  y2="19"  stroke="#111" stroke-width="0.55" opacity="0.4"/>
+        <circle cx="32"   cy="6"  r="1.8" fill="#111"/>
+        <circle cx="54.5" cy="19" r="1.8" fill="#111"/>
+        <circle cx="54.5" cy="45" r="1.8" fill="#111"/>
+        <circle cx="32"   cy="58" r="1.8" fill="#111"/>
+        <circle cx="9.5"  cy="45" r="1.8" fill="#111"/>
+        <circle cx="9.5"  cy="19" r="1.8" fill="#111"/>
+        <circle cx="32"   cy="32" r="3"   fill="#111"/>
+      </svg>
+    </div>
+
+    <div class="hero-rule-top"></div>
+    <h1 class="hero-title">SIXTH ELEMENT</h1>
+    <p class="hero-sub">COFFEE ROASTERS</p>
+    <div class="hero-rule-mid"></div>
+    <p class="hero-tagline">it was always you.</p>
+
+  </div>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-tick"></div>
+  </div>
+</section>
+
+
+<!-- ── DEFINITION ── -->
+<section class="definition">
+
+  <h2 class="def-title reveal">
+    Carbon. The sixth element.<br/>
+    <em>The basis of all organic life.</em>
+  </h2>
+
+  <div class="def-rule reveal"></div>
+
+  <p class="def-body reveal">
+    In the cup, it shows up as aroma compounds, caramelisation, and the thousand
+    variables that separate a forgettable brew from one that stops you cold.
+    We are a specialty coffee roaster built around one obsession — precision at the
+    roaster that translates to <em>absolute clarity</em> in the cup.
+    SCA-certified. Jersey City, NJ. Currently sampling. Almost ready.
+  </p>
+
+</section>
+
+
+<!-- ── FIRST CRACK ── -->
+<section class="firstcrack">
+
+  <p class="fc-label reveal">Status</p>
+
+  <h2 class="fc-title reveal">
+    Waiting for the<br/><em>First Crack.</em>
+  </h2>
+
+  <div class="fc-rule reveal"></div>
+
+  <p class="fc-body reveal">
+    In roasting, first crack is the moment everything changes — the bean opens up,
+    the sugars caramelise, and you know something very good is about to happen.
+    We're almost there. The beans are in the drum.
+  </p>
+
+  <p class="fc-status reveal">The beans are in the drum. You're next.</p>
+
+  <div class="fc-progress reveal d1">
+    <div class="fc-step">
+      <span class="fc-step-label">Green sampling</span>
+      <span class="fc-step-status done">✓ Done</span>
+    </div>
+    <div class="fc-connector"></div>
+    <div class="fc-step">
+      <span class="fc-step-label">Profile development</span>
+      <span class="fc-step-status done">✓ Done</span>
+    </div>
+    <div class="fc-connector"></div>
+    <div class="fc-step">
+      <span class="fc-step-label">First production roast</span>
+      <span class="fc-step-status pending">— Soon</span>
+    </div>
+    <div class="fc-connector"></div>
+    <div class="fc-step">
+      <span class="fc-step-label">You get your bag</span>
+      <span class="fc-step-status pending">— Soon</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ── EMAIL SIGNUP ── -->
+<section class="signup">
+
+  <p class="signup-label reveal">Be the first to know</p>
+  <h2 class="signup-title reveal">Sign up.</h2>
+  <p class="signup-sub reveal">
+    When the first batch drops, this list hears first.<br/>
+    No noise. Just coffee.
+  </p>
+
+  <form class="signup-form reveal" onsubmit="handleSubmit(event)">
+    <input type="email" id="email-input" placeholder="your@email.com" required/>
+    <button type="submit">Notify Me</button>
+  </form>
+
+  <a href="https://www.instagram.com/sixthelementcoffee/" target="_blank" class="signup-ig reveal d1">
+    or follow along on Instagram → @sixthelementcoffee
+  </a>
+
+</section>
+
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span class="foot-brand">Sixth Element Coffee Roasters · Jersey City NJ</span>
+  <a href="https://www.instagram.com/sixthelementcoffee/" target="_blank" class="foot-ig">@sixthelementcoffee</a>
+</footer>
+
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const input = document.getElementById('email-input');
+    const btn = e.target.querySelector('button');
+    btn.textContent = 'You\'re on the list.';
+    btn.style.background = '#555';
+    input.value = '';
+    input.placeholder = 'See you on the other side.';
+    input.disabled = true;
+    btn.disabled = true;
+  }
+</script>
+</body>
+</html>
