@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><style>polygon,line,circle{stroke:%23111}@media(prefers-color-scheme:dark){polygon,line,circle{stroke:%23f4f0eb}circle.filled{fill:%23f4f0eb!important}}</style><polygon points='20,3.5 34.3,11.75 34.3,28.25 20,36.5 5.7,28.25 5.7,11.75' stroke-width='1' fill='none'/><line x1='20' y1='20' x2='20' y2='3.5' stroke-width='0.55' opacity='0.6'/><line x1='20' y1='20' x2='34.3' y2='11.75' stroke-width='0.55' opacity='0.6'/><line x1='20' y1='20' x2='34.3' y2='28.25' stroke-width='0.55' opacity='0.6'/><line x1='20' y1='20' x2='20' y2='36.5' stroke-width='0.55' opacity='0.6'/><line x1='20' y1='20' x2='5.7' y2='28.25' stroke-width='0.55' opacity='0.6'/><line x1='20' y1='20' x2='5.7' y2='11.75' stroke-width='0.55' opacity='0.6'/><circle class='filled' cx='20' cy='3.5' r='1.6' fill='%23111'/><circle class='filled' cx='34.3' cy='11.75' r='1.6' fill='%23111'/><circle class='filled' cx='34.3' cy='28.25' r='1.6' fill='%23111'/><circle class='filled' cx='20' cy='36.5' r='1.6' fill='%23111'/><circle class='filled' cx='5.7' cy='28.25' r='1.6' fill='%23111'/><circle class='filled' cx='5.7' cy='11.75' r='1.6' fill='%23111'/><circle class='filled' cx='20' cy='20' r='2.4' fill='%23111'/></svg>"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sixth Element Coffee Roasters</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Josefin+Sans:wght@100;200;300&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
@@ -360,10 +359,10 @@
 
     /* Progress strip */
     .fc-progress {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(7, auto);
       align-items: center;
       justify-content: center;
-      flex-wrap: nowrap;
       max-width: 900px;
       margin: 0 auto;
     }
@@ -374,7 +373,6 @@
       align-items: center;
       gap: 0.5rem;
       padding: 0 1.2rem;
-      flex-shrink: 0;
     }
 
     .fc-step-label {
@@ -554,14 +552,40 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 680px) {
       nav { padding: 1.1rem 1.5rem; }
-      .definition { padding: 5rem 1.8rem; }
-      .firstcrack, .signup { padding: 5rem 1.8rem; }
-      .fc-progress { gap: 1rem; }
+      .nav-wordmark .nw-bot { display: none; }
+      .nav-wordmark .nw-top { font-size: 0.6rem; }
+      .nav-cta { font-size: 0.44rem; padding: 0.5rem 1rem; }
+
+      .hero { padding: 8rem 1.8rem 5rem; }
+      .hero-title { letter-spacing: 0.3em; }
+      .hero-sub { letter-spacing: 0.3em; }
+
+      .definition { padding: 4rem 1.8rem; }
+      .def-title { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+
+      .firstcrack { padding: 4rem 1.8rem; }
+      .fc-title { font-size: clamp(1.8rem, 7vw, 3rem); }
+      .fc-body { font-size: 0.95rem; }
+
+      .fc-progress {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        max-width: 280px;
+        margin: 0 auto;
+        text-align: left;
+      }
       .fc-connector { display: none; }
-      .signup-form { flex-direction: column; border: none; gap: 0.5rem; }
+      .fc-step { align-items: flex-start; padding: 0; flex-direction: row; justify-content: space-between; gap: 1rem; }
+      .fc-step-label { font-size: 0.4rem; }
+      .fc-step-status { font-size: 0.48rem; }
+
+      .signup { padding: 4rem 1.8rem; }
+      .signup-form { flex-direction: column; border: none; gap: 0.5rem; max-width: 100%; }
       .signup-form input { border: 1px solid var(--rule); }
       .signup-form button { border: 1px solid var(--ink); }
-      footer { flex-direction: column; gap: 0.8rem; text-align: center; }
+
+      footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 1.5rem; }
     }
   </style>
 </head>
